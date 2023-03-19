@@ -1,0 +1,55 @@
+import PostCard from "../components/postcard";
+import getPosts from "../helpers/getPosts";
+import { Container, Heading } from "@chakra-ui/react";
+import Section from "../components/section";
+import Layout from "../components/layouts/article";
+
+const Works = ({ posts }) => (
+  <Layout>
+    <Container maxWidth="4xl" css={styles.container}>
+      <title>Chauncey Harlan Portfolio - Work</title>
+
+      <Section>
+        <Heading css={styles.heading}>Work</Heading>
+      </Section>
+
+      {posts.map((post) => (
+        <Section delay={0.4}>
+          <PostCard
+            delay={0.3}
+            key={post.slug}
+            title={post.data.title}
+            date={post.data.date}
+            description={post.data.description}
+            tags={post.data.tags}
+            slug={post.slug}
+          />
+        </Section>
+      ))}
+    </Container>
+  </Layout>
+);
+
+const styles = {
+  container: {
+    marginTop: "4rem",
+  },
+  heading: {
+    fontWeight: "bold",
+    fontSize: "4xl",
+    marginTop: "2rem",
+    marginBottom: "5rem",
+  },
+};
+
+export const getStaticProps = () => {
+  const posts = getPosts();
+
+  return {
+    props: {
+      posts,
+    },
+  };
+};
+
+export default Works;
