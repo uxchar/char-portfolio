@@ -1,11 +1,4 @@
-import {
-  Box,
-  IconButton,
-  Link,
-  Stack,
-  Heading,
-  Container,
-} from "@chakra-ui/react";
+import { Box, IconButton, Link, Stack, Container } from "@chakra-ui/react";
 import * as Icon from "react-feather";
 
 const Footer = () => {
