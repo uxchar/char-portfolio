@@ -80,7 +80,7 @@ const Navbar = (props) => {
         <Box flex={1} align="right">
           <Box mr={2} display={{ base: "inline-block", md: "none" }}>
             <Button onClick={handleToggle} variant="ghost">
-              {show ? <CloseIcon /> : <HamburgerIcon />}
+              {show ? <CloseIcon /> : <HamburgerIcon boxSize={8} />}
             </Button>
           </Box>
         </Box>
@@ -89,7 +89,7 @@ const Navbar = (props) => {
       {show ? (
         <Box
           pb={4}
-          mt={2}
+          mt={3}
           ml={1}
           mr={4}
           display={{ base: "block", md: "none" }}
