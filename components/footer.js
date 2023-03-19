@@ -11,8 +11,6 @@ import * as Icon from "react-feather";
 const Footer = () => {
   return (
     <Container mt="200px" maxW="4xl" delay="0.3">
-      <Heading fontSize={15}>Contact:</Heading>
-
       <Box align="center" opacity={1} mt="20px" mb="60px">
         <Stack
           direction={{ base: "column", md: "row" }}
