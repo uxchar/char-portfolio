@@ -10,7 +10,7 @@ const About = () => (
       <title>CH Portfolio - About</title>
     </Head>
     <Container>
-      <Heading fontSize={30} my={10} mx="auto" textAlign="center">
+      <Heading fontSize={30} my={0} mx="auto" textAlign="center">
         Hey I&rsquo;m Chauncey👋🏾
       </Heading>
       <Box mx="auto" mb="30px">
@@ -35,8 +35,8 @@ const About = () => (
           the tiniest pixel to the overall user experience, I&rsquo;m always
           thinking about how every little thing can impact the end result. When
           I&rsquo;m not designing, you can find me exploring sound design,
-          diving into a good book, lifting some iron, or learning about 3D
-          modeling. Want to collaborate or talk design? Let&rsquo;s chat!
+          lifting some iron, or trying to capture the perfect shot with my
+          camera. Want to collaborate or talk design? Let&rsquo;s chat!
         </Text>
       </Section>
     </Container>
