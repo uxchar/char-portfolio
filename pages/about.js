@@ -1,30 +1,31 @@
-import { Container, Heading, Text, Box, Image, Center } from "@chakra-ui/react";
+import { Container, Heading, Text, Box } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
+import Head from "next/dist/shared/lib/head";
 
 const About = () => (
-  <Layout title="About">
+  <Layout>
+    <Head>
+      <title>CH Portfolio - About</title>
+    </Head>
     <Container>
-      <Heading
-        display="block"
-        fontSize={30}
-        my={20}
-        mx="auto"
-        textAlign="center"
-      >
+      <Heading fontSize={30} my={20} mx="auto" textAlign="center">
         Hey I'm Chauncey👋🏾
       </Heading>
-      <Box boxSize="sm" mx="auto" mb="30px">
+      <Box mx="auto" mb="30px">
         <Image
-          mx="auto"
-          borderRadius="full"
-          boxSize="70%"
+          boxSize={300}
+          borderRadius="5%"
+          maxWidth="100%"
+          height="auto"
           objectFit="cover"
+          mx="auto"
           src="/images/PXL_20211229_200055238.PORTRAIT.jpg"
           alt="Chauncey Harlan"
         />
       </Box>
-      <Section delay={0.3}>
+      <Section>
         <Text>
           I'm a UX designer based in Louisville, KY and I'm all about creating
           digital experiences that put a smile on people's faces. But here's a
@@ -37,7 +38,6 @@ const About = () => (
           to capture the perfect shot with my camera. Want to collaborate or
           talk design? Let's chat!
         </Text>
-        <br />{" "}
       </Section>
     </Container>
   </Layout>

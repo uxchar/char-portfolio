@@ -1,12 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import {
-  Center,
   IconButton,
   useColorMode,
   useColorModeValue,
-  Text,
-  Stack,
-  Flex, // added Flex component
+  Flex,
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 

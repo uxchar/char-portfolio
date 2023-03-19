@@ -7,12 +7,7 @@ import {
   Stack,
   Heading,
   Flex,
-  Menu,
-  MenuItem,
-  MenuList,
-  MenuButton,
   useColorModeValue,
-  Icon,
   Button,
   Text,
 } from "@chakra-ui/react";
@@ -65,7 +60,7 @@ const Navbar = (props) => {
 
         <Box
           display={{ base: "none", md: "block" }}
-          flexGrow={1000}
+          flexGrow={70}
           mt={{ base: 4, md: 0 }}
         >
           <Stack direction="row" spacing={4} justify="flex-end">

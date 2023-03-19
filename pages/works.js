@@ -1,3 +1,4 @@
+import Head from "next/head";
 import PostCard from "../components/postcard";
 import getPosts from "../helpers/getPosts";
 import { Container, Heading } from "@chakra-ui/react";
@@ -6,9 +7,10 @@ import Layout from "../components/layouts/article";
 
 const Works = ({ posts }) => (
   <Layout>
+    <Head>
+      <title>CH Portfolio - Work</title>
+    </Head>
     <Container maxWidth="4xl" css={styles.container}>
-      <title>Chauncey Harlan Portfolio - Work</title>
-
       <Section>
         <Heading css={styles.heading}>Work</Heading>
       </Section>

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Container, Heading, Text } from "@chakra-ui/react";
-import ThemeToggleButton from "./theme-toggle-button";
 
 const PostCard = ({ title, date, description, slug }) => (
   <Container maxW="3xl" borderRadius="6px" py={4} my={4}>

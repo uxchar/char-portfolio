@@ -5,7 +5,6 @@ import getPosts from "../helpers/getPosts";
 import { serialize } from "next-mdx-remote/serialize";
 import Image from "next/image";
 import imageSize from "rehype-img-size";
-import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { chakra } from "@chakra-ui/react";
 
