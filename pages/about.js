@@ -35,8 +35,8 @@ const About = () => (
           the tiniest pixel to the overall user experience, I&rsquo;m always
           thinking about how every little thing can impact the end result. When
           I&rsquo;m not designing, you can find me exploring sound design,
-          diving into a good book, or trying to capture the perfect shot with my
-          camera. Want to collaborate or talk design? Let&rsquo;s chat!
+          diving into a good book, or currently learning about 3D modeling. Want
+          to collaborate or talk design? Let&rsquo;s chat!
         </Text>
       </Section>
     </Container>
