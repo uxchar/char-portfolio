@@ -11,7 +11,7 @@ const About = () => (
     </Head>
     <Container>
       <Heading fontSize={30} my={20} mx="auto" textAlign="center">
-        Hey I'm Chauncey👋🏾
+        Hey I&rsquo;m Chauncey👋🏾
       </Heading>
       <Box mx="auto" mb="30px">
         <Image
@@ -27,16 +27,16 @@ const About = () => (
       </Box>
       <Section>
         <Text>
-          I'm a UX designer based in Louisville, KY and I'm all about creating
-          digital experiences that put a smile on people's faces. But here's a
-          fun fact about me - I actually have a degree in History! I've found
-          that my passion for researching the past has actually helped me
-          develop a keen eye for detail in my designs. From the tiniest pixel to
-          the overall user experience, I'm always thinking about how every
-          little thing can impact the end result. When I'm not designing, you
-          can find me exploring sound design, diving into a good book, or trying
-          to capture the perfect shot with my camera. Want to collaborate or
-          talk design? Let's chat!
+          I&apos;m a UX designer based in Louisville, KY and I&apos;m all about
+          creating digital experiences that put a smile on people&rsquo;s faces.
+          But here&rsquo;s a fun fact about me - I actually have a degree in
+          History! I&rsquo;ve found that my passion for researching the past has
+          actually helped me develop a keen eye for detail in my designs. From
+          the tiniest pixel to the overall user experience, I&rsquo;m always
+          thinking about how every little thing can impact the end result. When
+          I&rsquo;m not designing, you can find me exploring sound design,
+          diving into a good book, or trying to capture the perfect shot with my
+          camera. Want to collaborate or talk design? Let&rsquo;s chat!
         </Text>
       </Section>
     </Container>

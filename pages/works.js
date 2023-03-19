@@ -16,10 +16,9 @@ const Works = ({ posts }) => (
       </Section>
 
       {posts.map((post) => (
-        <Section delay={0.4}>
+        <Section delay={0.4} key={post.slug}>
           <PostCard
             delay={0.3}
-            key={post.slug}
             title={post.data.title}
             date={post.data.date}
             description={post.data.description}
