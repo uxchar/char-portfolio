@@ -52,7 +52,7 @@ export const getStaticProps = async ({ params }) => {
 export const components = {
   img: (props) => (
     // height and width are part of the props, so they get automatically passed here with {...props}
-    <Image {...props} loading="lazy" mb="40px" alt={props.alt || '' />
+    <Image {...props} loading="lazy" mb="40px" alt={props.alt || ""} />
   ),
   h3: (props) => (
     <chakra.h3 fontSize="2xl" mb="40px" fontWeight="700" {...props} />
