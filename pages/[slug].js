@@ -55,7 +55,7 @@ export const components = {
     <Image {...props} loading="lazy" mb="40px" alt={props.alt || ""} />
   ),
   h3: (props) => (
-    <chakra.h3 fontSize="2xl" mb="40px" fontWeight="700" {...props} />
+    <chakra.h3 fontSize="3xl" mb="40px" mt="80px" fontWeight="700" {...props} />
   ),
   h4: (props) => (
     <chakra.h4
@@ -66,5 +66,5 @@ export const components = {
       {...props}
     />
   ),
-  p: (props) => <chakra.p my="40px" {...props} />,
+  p: (props) => <chakra.p my="40px" fontFamily="Erode" {...props} />,
 };

@@ -10,7 +10,7 @@ const About = () => (
       <title>CH Portfolio - About</title>
     </Head>
     <Container>
-      <Heading fontSize={30} my={20} mx="auto" textAlign="center">
+      <Heading fontSize={30} my={10} mx="auto" textAlign="center">
         Hey I&rsquo;m Chauncey👋🏾
       </Heading>
       <Box mx="auto" mb="30px">
@@ -26,7 +26,7 @@ const About = () => (
         />
       </Box>
       <Section>
-        <Text>
+        <Text fontFamily="Erode">
           I&apos;m a UX designer based in Louisville, KY and I&apos;m all about
           creating digital experiences that put a smile on people&rsquo;s faces.
           But here&rsquo;s a fun fact about me - I actually have a degree in

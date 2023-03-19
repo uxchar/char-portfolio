@@ -63,13 +63,13 @@ const Navbar = (props) => {
         >
           <Stack direction="row" spacing={4} justify="flex-end">
             <LinkItem href="/works" path={path}>
-              <Text fontSize="sm" textTransform="uppercase">
+              <Text fontSize="sm" textTransform="uppercase" fontWeight={700}>
                 Work
               </Text>
             </LinkItem>
 
             <LinkItem href="/about" path={path}>
-              <Text fontSize="sm" textTransform="uppercase">
+              <Text fontSize="sm" textTransform="uppercase" fontWeight={700}>
                 About
               </Text>
             </LinkItem>
