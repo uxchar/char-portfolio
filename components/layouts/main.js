@@ -3,7 +3,7 @@ import Navbar from "../navbar";
 import { Box, Container } from "@chakra-ui/react";
 import Footer from "../footer";
 
-const Main = ({ children, router }) => {
+const Main = ({ children }) => {
   return (
     <Box as="main" pb={8}>
       <Head>

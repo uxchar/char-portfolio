@@ -33,8 +33,6 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   );
 };
 
-const MenuLink = (props) => <Link as={NextLink} {...props} />;
-
 const Navbar = (props) => {
   const { path } = props;
   const [show, setShow] = useState(false);
