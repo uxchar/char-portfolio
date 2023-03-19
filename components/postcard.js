@@ -13,7 +13,6 @@ const PostCard = ({ title, date, description, slug }) => (
         </Text>
         <Text
           fontFamily="Erode"
-          fontStyle="italic"
           fontSize="sm"
           whiteSpace="normal"
           wordWrap="break-word"
