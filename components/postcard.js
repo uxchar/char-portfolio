@@ -15,7 +15,7 @@ const PostCard = ({ title, date, description, slug }) => (
           fontFamily="Erode"
           fontSize="sm"
           whiteSpace="normal"
-          wordWrap="break-word"
+          wordwrap="break-word"
           mt={2}
           mb={4}
         >

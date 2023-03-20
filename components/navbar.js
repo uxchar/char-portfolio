@@ -94,7 +94,7 @@ const Navbar = (props) => {
           mr={4}
           display={{ base: "block", md: "none" }}
         >
-          <Stack as="nav" spacing={4}>
+          <Stack as="nav" spacing={4} justifyContent="flex">
             <LinkItem href="/works" path={path} onClick={handleToggle}>
               Work
             </LinkItem>
@@ -103,7 +103,7 @@ const Navbar = (props) => {
               About
             </LinkItem>
 
-            <ThemeToggleButton />
+            <ThemeToggleButton position="relative" ml="auto" />
           </Stack>
         </Box>
       ) : null}

@@ -10,7 +10,7 @@ const About = () => (
       <title>CH Portfolio - About</title>
     </Head>
     <Container>
-      <Heading fontSize={30} my={15} mx="auto" textAlign="center">
+      <Heading fontSize={30} my={55} mx="auto" textAlign="center">
         Hey I&rsquo;m Chauncey👋🏾
       </Heading>
       <Box mx="auto" mb="30px">
