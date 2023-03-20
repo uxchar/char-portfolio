@@ -16,7 +16,7 @@ import ThemeToggleButton from "./theme-toggle-button";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
-  const inactiveColor = useColorModeValue("gray.800", "whiteAlpha.900");
+  const inactiveColor = useColorModeValue("#221F1F", "#f0e7db");
   return (
     <Link
       as={NextLink}
@@ -24,7 +24,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       scroll={false}
       p={2}
       bg={active ? "grassTeal" : undefined}
-      color={active ? "#202023" : inactiveColor}
+      color={active ? "#221F1F" : inactiveColor}
       target={target}
       {...props}
     >
