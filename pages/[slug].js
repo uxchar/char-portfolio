@@ -7,6 +7,8 @@ import Image from "next/image";
 import imageSize from "rehype-img-size";
 import "react-medium-image-zoom/dist/styles.css";
 import { chakra } from "@chakra-ui/react";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 function Post({ data, content }) {
   return (
@@ -52,7 +54,9 @@ export const getStaticProps = async ({ params }) => {
 export const components = {
   img: (props) => (
     // height and width are part of the props, so they get automatically passed here with {...props}
-    <Image {...props} loading="lazy" mb="40px" alt={props.alt || ""} />
+    <Zoom>
+      <Image {...props} loading="lazy" mb="40px" alt={props.alt || ""} />
+    </Zoom>
   ),
   h3: (props) => (
     <chakra.h3 fontSize="3xl" mb="40px" mt="80px" fontWeight="700" {...props} />
