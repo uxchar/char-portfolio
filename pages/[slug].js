@@ -1,4 +1,5 @@
 import { MDXRemote } from "next-mdx-remote";
+import { useState, useEffect } from "react";
 import { Container, Heading } from "@chakra-ui/react";
 import getPost from "../helpers/getPost";
 import getPosts from "../helpers/getPosts";
@@ -6,11 +7,36 @@ import { serialize } from "next-mdx-remote/serialize";
 import Image from "next/image";
 import imageSize from "rehype-img-size";
 import "react-medium-image-zoom/dist/styles.css";
-import { chakra } from "@chakra-ui/react";
+import { Button, chakra } from "@chakra-ui/react";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 function Post({ data, content }) {
+  const [showBackToTopButton, setShowBackToTopButton] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  const handleScroll = () => {
+    const scrollTop = document.documentElement.scrollTop;
+    setShowBackToTopButton(scrollTop > prevScrollPos);
+    setPrevScrollPos(scrollTop);
+
+    // add this line to show the button only when scrolling towards the top
+    if (scrollTop < prevScrollPos) {
+      setShowBackToTopButton(true);
+    }
+  };
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Add this useEffect hook to handle scrolling events
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Container maxW="3xl">
       <div>
@@ -19,6 +45,19 @@ function Post({ data, content }) {
         </Heading>
 
         <MDXRemote {...content} components={components} />
+
+        {showBackToTopButton && (
+          <Button
+            onClick={scrollToTop}
+            position="fixed"
+            bottom="20px"
+            right="20px"
+            size="md"
+            colorScheme="blue"
+          >
+            Back to top
+          </Button>
+        )}
       </div>
     </Container>
   );

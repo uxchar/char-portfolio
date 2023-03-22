@@ -1,7 +1,7 @@
 import Head from "next/head";
 import PostCard from "../components/postcard";
 import getPosts from "../helpers/getPosts";
-import { Container, Heading } from "@chakra-ui/react";
+import { Container, Heading, useColorModeValue } from "@chakra-ui/react";
 import Section from "../components/section";
 import Layout from "../components/layouts/article";
 
@@ -12,7 +12,12 @@ const Works = ({ posts }) => (
     </Head>
     <Container maxWidth="4xl" css={styles.container}>
       <Section>
-        <Heading css={styles.heading}>Work</Heading>
+        <Heading
+          css={styles.heading}
+          color={useColorModeValue("#5044fc", "#82fab2")}
+        >
+          Work
+        </Heading>
       </Section>
 
       {posts.map((post) => (
@@ -37,8 +42,8 @@ const styles = {
     marginTop: "4rem",
   },
   heading: {
-    fontWeight: "bold",
-    fontSize: "4xl",
+    fontWeight: "700",
+    fontSize: "40px",
     marginTop: "2rem",
     marginBottom: "5rem",
   },
