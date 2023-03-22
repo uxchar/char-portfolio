@@ -8,7 +8,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-const PostCard = ({ title, date, description, tags, image, slug }) => (
+const PostCard = ({ title, date, description, image, slug }) => (
   <Link legacyBehavior href="/[slug]" as={`/${slug}`} passHref>
     <Button
       h="auto"
