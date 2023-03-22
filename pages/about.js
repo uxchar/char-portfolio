@@ -21,7 +21,7 @@ const About = () => (
         my={55}
         position="absolute"
         top="-65px"
-        color={useColorModeValue("#b570fa", "#DBFFFC")}
+        color={useColorModeValue("#b570fa", "#82fab2")}
       >
         Hey I&rsquo;m Chauncey
       </Heading>

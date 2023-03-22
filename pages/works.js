@@ -19,6 +19,7 @@ const Works = ({ posts }) => (
         <Section delay={0.4} key={post.slug}>
           <PostCard
             delay={0.3}
+            image={post.data.image}
             title={post.data.title}
             date={post.data.date}
             description={post.data.description}

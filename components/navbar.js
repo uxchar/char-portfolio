@@ -145,6 +145,7 @@ const Navbar = (props) => {
             path={path}
             onClick={handleToggle}
             fontSize="32px"
+            fontWeight="bold"
             color={useColorModeValue("#f0e7db", "#221F1F")}
           >
             Work
@@ -155,6 +156,7 @@ const Navbar = (props) => {
             path={path}
             onClick={handleToggle}
             fontSize="32px"
+            fontWeight="bold"
             color={useColorModeValue("#f0e7db", "#221F1F")}
           >
             About
