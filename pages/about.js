@@ -1,4 +1,10 @@
-import { Container, Heading, Text, Box } from "@chakra-ui/react";
+import {
+  Container,
+  Heading,
+  Text,
+  Box,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
@@ -9,9 +15,15 @@ const About = () => (
     <Head>
       <title>CH Portfolio - About</title>
     </Head>
-    <Container>
-      <Heading fontSize={30} my={55} mx="auto" textAlign="center">
-        Hey I&rsquo;m Chauncey 👋🏾
+    <Container mt="60px">
+      <Heading
+        fontSize={50}
+        my={55}
+        position="absolute"
+        top="-65px"
+        color={useColorModeValue("#b570fa", "#DBFFFC")}
+      >
+        Hey I&rsquo;m Chauncey
       </Heading>
       <Box mx="auto" mb="30px">
         <Image

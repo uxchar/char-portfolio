@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { Button, Container, Heading, Text } from "@chakra-ui/react";
+import { Button, Container, Heading, Text, Image } from "@chakra-ui/react";
 
-const PostCard = ({ title, date, description, slug }) => (
+const PostCard = ({ title, date, description, tags, thumbnailUrl, slug }) => (
   <Link legacyBehavior href="/[slug]" as={`/${slug}`} passHref>
     <Button h="auto" width="auto" bg="#ffd" opacity="0.9" color="#110110">
       <Container textAlign="left" maxW="3xl" borderRadius="6px" py={4} my={4}>
+        <Image src={thumbnailUrl} />
         <Heading as="h2" size="md" fontWeight="extrabold" mb={4}>
           {title}
         </Heading>
@@ -21,7 +22,7 @@ const PostCard = ({ title, date, description, slug }) => (
         >
           {description}
         </Text>
-
+        <Text>{tags}</Text>
         <Link legacyBehavior href="/[slug]" as={`/${slug}`} passHref>
           <a color="#3182ce" mt={2} mb={1} fontSize="sm">
             Read more

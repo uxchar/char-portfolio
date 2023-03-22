@@ -33,6 +33,52 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   );
 };
 
+const OverlayMenu = ({ isOpen, onClose, children }) => {
+  const menuStyles = {
+    position: "fixed",
+    top: isOpen ? 0 : "-100%",
+    left: 0,
+    bottom: 0,
+    right: 0,
+    zIndex: 99,
+    transition: "top 0.5s ease-out",
+  };
+
+  // Add animation class when menu is opened
+  const menuClass = isOpen ? "overlay-menu open" : "overlay-menu";
+
+  return (
+    <Box
+      className={menuClass}
+      style={menuStyles}
+      bg={useColorModeValue("#221F1F", "#f0e7db")}
+      maxW="xl"
+      mx="auto"
+      h="100vh"
+      overflowY="auto"
+      boxShadow="xl"
+      p={6}
+      onClick={(e) => e.stopPropagation()}
+      position="relative"
+    >
+      <Button
+        position="absolute"
+        top={0}
+        right={0}
+        mt={2}
+        mr={2}
+        onClick={onClose}
+        variant="ghost"
+        color={useColorModeValue("#f0e7db", "#221F1F")}
+        _hover={{ bg: useColorModeValue("gray.100", "whiteAlpha.100") }}
+      >
+        <CloseIcon boxSize={4} />
+      </Button>
+      {children}
+    </Box>
+  );
+};
+
 const Navbar = (props) => {
   const { path } = props;
   const [show, setShow] = useState(false);
@@ -80,33 +126,43 @@ const Navbar = (props) => {
         <Box flex={1} align="right">
           <Box mr={2} display={{ base: "inline-block", md: "none" }}>
             <Button onClick={handleToggle} variant="ghost">
-              {show ? <CloseIcon /> : <HamburgerIcon boxSize={8} />}
+              {show ? " " : <HamburgerIcon boxSize={8} />}
             </Button>
           </Box>
         </Box>
       </Container>
 
-      {show ? (
-        <Box
-          pb={4}
-          mt={3}
-          ml={1}
-          mr={4}
-          display={{ base: "block", md: "none" }}
+      <OverlayMenu isOpen={show} onClose={handleToggle}>
+        <Stack
+          as="nav"
+          spacing={4}
+          alignItems="center"
+          my="50%"
+          justifyContent="center"
         >
-          <Stack as="nav" spacing={4} justifyContent="flex">
-            <LinkItem href="/works" path={path} onClick={handleToggle}>
-              Work
-            </LinkItem>
+          <LinkItem
+            href="/works"
+            path={path}
+            onClick={handleToggle}
+            fontSize="32px"
+            color={useColorModeValue("#f0e7db", "#221F1F")}
+          >
+            Work
+          </LinkItem>
 
-            <LinkItem href="/about" path={path} onClick={handleToggle}>
-              About
-            </LinkItem>
+          <LinkItem
+            href="/about"
+            path={path}
+            onClick={handleToggle}
+            fontSize="32px"
+            color={useColorModeValue("#f0e7db", "#221F1F")}
+          >
+            About
+          </LinkItem>
 
-            <ThemeToggleButton position="relative" ml="auto" />
-          </Stack>
-        </Box>
-      ) : null}
+          <ThemeToggleButton />
+        </Stack>
+      </OverlayMenu>
     </Box>
   );
 };

@@ -24,22 +24,21 @@ const ThemeToggleButton = () => {
         exit={{ y: 20, opacity: 0 }}
         transition={{ duration: 0.2 }}
       >
-        <Flex
-          direction="row"
-          alignItems="center"
-          marginTop="18px"
-          marginLeft="flex-end"
-        >
+        <Flex direction="row" alignItems="center" marginLeft="flex-end">
           <IconButton
-            position="fixed"
+            position="relative"
             background="none"
-            borderRadius="30px"
+            width="60px"
+            height="60px"
+            borderRadius="10px"
+            bg="#fff"
             aria-label="Toggle theme"
-            align="center"
             marginLeft="auto"
             justify="flex-end"
             icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
             onClick={handleClick}
+            size={{ base: "xl", md: "md" }} // use responsive sizing
+            color="#b570fa"
           />
         </Flex>
       </motion.div>
