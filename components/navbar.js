@@ -52,7 +52,7 @@ const OverlayMenu = ({ isOpen, onClose, children }) => {
       className={menuClass}
       style={menuStyles}
       bg={useColorModeValue("#221F1F", "#f0e7db")}
-      maxW="xl"
+      maxW="4xl"
       mx="auto"
       h="100vh"
       overflowY="auto"

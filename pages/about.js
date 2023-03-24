@@ -28,9 +28,8 @@ const About = () => (
       <Box mx="auto" mb="30px">
         <Image
           boxSize={300}
-          borderRadius="5%"
+          borderRadius="full"
           maxWidth="100%"
-          height="auto"
           objectFit="cover"
           mx="auto"
           src="/images/PXL_20211229_200055238.PORTRAIT.jpg"
@@ -39,16 +38,16 @@ const About = () => (
       </Box>
       <Section>
         <Text fontFamily="Erode">
-          I&apos;m a UX designer based in Louisville, KY and I&apos;m all about
-          creating digital experiences that put a smile on people&rsquo;s faces.
-          But here&rsquo;s a fun fact about me - I actually have a degree in
-          History! I&rsquo;ve found that my passion for researching the past has
-          actually helped me develop a keen eye for detail in my designs. From
-          the tiniest pixel to the overall user experience, I&rsquo;m always
-          thinking about how every little thing can impact the end result. When
-          I&rsquo;m not designing, you can find me exploring sound design,
-          lifting some iron, or trying to capture the perfect shot with my
-          camera. Want to collaborate or talk design? Let&rsquo;s chat!
+          I am a UX designer based in Louisville, KY that simply likes to make
+          cool things. My approach is to experiment with user data and visual
+          design elements in order to craft delightful experiences. It might be
+          surprising, but my degree is actually in History. However, my passion
+          for researching the past has helped me develop an attention to detail
+          in my designs. I always consider how every small element can impact
+          the overall user experience. When I'm not designing, I enjoy exploring
+          sound design, working out, or practicing photography. If you're
+          interested in collaborating or chatting about design, feel free to
+          reach out!
         </Text>
       </Section>
     </Container>

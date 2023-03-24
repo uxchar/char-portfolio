@@ -1,35 +1,34 @@
 import { MDXRemote } from "next-mdx-remote";
 import { useState, useEffect } from "react";
-import { Container, Heading } from "@chakra-ui/react";
+import {
+  Container,
+  Heading,
+  Button,
+  chakra,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import getPost from "../helpers/getPost";
 import getPosts from "../helpers/getPosts";
 import { serialize } from "next-mdx-remote/serialize";
 import Image from "next/image";
 import imageSize from "rehype-img-size";
-import "react-medium-image-zoom/dist/styles.css";
-import { Button, chakra } from "@chakra-ui/react";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import { motion, useScroll } from "framer-motion";
 
-function Post({ data, content }) {
+const Post = ({ data, content }) => {
   const [showBackToTopButton, setShowBackToTopButton] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const { scrollYProgress } = useScroll();
 
   const handleScroll = () => {
     const scrollTop = document.documentElement.scrollTop;
-    setShowBackToTopButton(scrollTop > prevScrollPos);
-    setPrevScrollPos(scrollTop);
-
-    // add this line to show the button only when scrolling towards the top
-    if (scrollTop < prevScrollPos) {
-      setShowBackToTopButton(true);
-    }
+    setShowBackToTopButton(scrollTop > 0);
   };
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Add this useEffect hook to handle scrolling events
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -39,6 +38,18 @@ function Post({ data, content }) {
 
   return (
     <Container maxW="3xl">
+      <motion.div
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: "10px",
+          background: "'red'",
+          transformOrigin: "0%",
+          scaleX: scrollYProgress,
+        }}
+      />
       <div>
         <Heading size="4xl" mt={24} mb={12} fontWeight="bold">
           {data.pageTitle}
@@ -53,7 +64,8 @@ function Post({ data, content }) {
             bottom="20px"
             right="20px"
             size="md"
-            colorScheme="blue"
+            bg={useColorModeValue("#5044fc", "#82fab2")}
+            color={useColorModeValue("#f0e7db", "#221F1F")}
           >
             Back to top
           </Button>
@@ -61,7 +73,7 @@ function Post({ data, content }) {
       </div>
     </Container>
   );
-}
+};
 
 export default Post;
 
@@ -78,8 +90,6 @@ export const getStaticProps = async ({ params }) => {
   const post = await getPost(params.slug);
   const mdxSource = await serialize(post.content, {
     mdxOptions: {
-      // use the image size plugin, you can also specify which folder to load images from
-      // in my case images are in /public/images/, so I just prepend 'public'
       rehypePlugins: [[imageSize, { dir: "public" }]],
     },
   });
