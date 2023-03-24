@@ -19,6 +19,8 @@ import { motion, useScroll } from "framer-motion";
 const Post = ({ data, content }) => {
   const [showBackToTopButton, setShowBackToTopButton] = useState(false);
   const { scrollYProgress } = useScroll();
+  const buttonBg = useColorModeValue("#5044fc", "#82fab2");
+  const buttonColor = useColorModeValue("#f0e7db", "#221F1F");
 
   const handleScroll = () => {
     const scrollTop = document.documentElement.scrollTop;
@@ -64,8 +66,8 @@ const Post = ({ data, content }) => {
             bottom="20px"
             right="20px"
             size="md"
-            bg={useColorModeValue("#5044fc", "#82fab2")}
-            color={useColorModeValue("#f0e7db", "#221F1F")}
+            bg={buttonBg}
+            color={buttonColor}
           >
             Back to top
           </Button>

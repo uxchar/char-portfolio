@@ -44,10 +44,10 @@ const About = () => (
           surprising, but my degree is actually in History. However, my passion
           for researching the past has helped me develop an attention to detail
           in my designs. I always consider how every small element can impact
-          the overall user experience. When I'm not designing, I enjoy exploring
-          sound design, working out, or practicing photography. If you're
-          interested in collaborating or chatting about design, feel free to
-          reach out!
+          the overall user experience. When I&apos;m not designing, I enjoy
+          exploring sound design, working out, or practicing photography. If
+          you&apos;re interested in collaborating or chatting about design, feel
+          free to reach out!
         </Text>
       </Section>
     </Container>

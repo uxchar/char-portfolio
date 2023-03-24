@@ -8,10 +8,10 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-const PostCard = ({ title, date, description, image, slug }) => (
+const PostCard = ({ title, date, description, image, slug, alt }) => (
   <Container textAlign="left" maxW="3xl" py={4} my={4} mb={5}>
     <Link legacyBehavior href="/[slug]" as={`/${slug}`} passHref>
-      <Image src={image} mb="25px" width="100%" cursor="pointer" />
+      <Image src={image} mb="25px" width="100%" cursor="pointer" alt={alt} />
     </Link>
     <Heading as="h2" size="md" fontWeight="extrabold" mb={4}>
       {title}
