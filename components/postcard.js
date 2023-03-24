@@ -37,7 +37,8 @@ const PostCard = ({ title, date, description, image, slug, alt }) => (
         padding="30px 40px"
         borderRadius="8px"
         bg={useColorModeValue("#5044fc", "#82fab2")}
-        color={useColorModeValue("#f0e7db", "#221F1F")}
+        color={useColorModeValue("#fff", "#221F1F")}
+        _hover="none"
       >
         <a mt={2} mb={1} fontSize="sm">
           Read more

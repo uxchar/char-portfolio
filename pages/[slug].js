@@ -18,12 +18,17 @@ import { motion, useScroll } from "framer-motion";
 
 const Post = ({ data, content }) => {
   const [showBackToTopButton, setShowBackToTopButton] = useState(false);
-  const { scrollYProgress } = useScroll();
+  const [scrollProgress, setScrollProgress] = useState(0);
   const buttonBg = useColorModeValue("#5044fc", "#82fab2");
-  const buttonColor = useColorModeValue("#f0e7db", "#221F1F");
+  const buttonColor = useColorModeValue("#fff", "#221F1F");
 
   const handleScroll = () => {
     const scrollTop = document.documentElement.scrollTop;
+    const windowHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrollProgress = (scrollTop / windowHeight) * 100;
+    setScrollProgress(scrollProgress);
     setShowBackToTopButton(scrollTop > 0);
   };
 
@@ -42,16 +47,24 @@ const Post = ({ data, content }) => {
     <Container maxW="3xl">
       <motion.div
         style={{
+          height: "5px",
+          background: "gray",
           position: "fixed",
           top: 0,
           left: 0,
           right: 0,
-          height: "10px",
-          background: "'red'",
-          transformOrigin: "0%",
-          scaleX: scrollYProgress,
+          zIndex: 99999,
         }}
-      />
+      >
+        <motion.div
+          style={{
+            height: "5px",
+            background: "#82fab2",
+            width: scrollProgress + "%",
+            transition: "width 0.2s ease-in-out",
+          }}
+        />
+      </motion.div>
       <div>
         <Heading size="4xl" mt={24} mb={12} fontWeight="bold">
           {data.pageTitle}
@@ -67,7 +80,9 @@ const Post = ({ data, content }) => {
             right="20px"
             size="md"
             bg={buttonBg}
+            x
             color={buttonColor}
+            _hover="none"
           >
             Back to top
           </Button>
