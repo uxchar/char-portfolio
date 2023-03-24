@@ -14,7 +14,7 @@ import Image from "next/image";
 import imageSize from "rehype-img-size";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Post = ({ data, content }) => {
   const [showBackToTopButton, setShowBackToTopButton] = useState(false);
