@@ -90,14 +90,13 @@ const Navbar = (props) => {
       <Container display="flex" maxW="4xl">
         <Flex align="center" mr={10}>
           <Heading
-            position="fixed"
             as="h1"
             size="md"
             marginLeft="-10px"
             letterSpacing={"tighter"}
           >
             <LinkItem href="/" path={path}>
-              CH
+              Chauncey Harlan
             </LinkItem>
           </Heading>
         </Flex>

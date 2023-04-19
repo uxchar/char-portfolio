@@ -12,14 +12,18 @@ const Home = () => (
             size="3xl"
             variant="page-title "
           >
-            Chauncey Harlan
+            User Experience Design & Front-End Development. Based in Louisville,
+            KY.{" "}
           </Heading>
         </Section>
 
         <Section delay={0.3}>
-          <Heading as="h2" size={18} fontWeight="light" marginBottom={75}>
-            User Experience Designer. Based in Louisville, KY.
-          </Heading>
+          <Heading
+            as="h2"
+            size={18}
+            fontWeight="light"
+            marginBottom={75}
+          ></Heading>
         </Section>
       </Box>
     </Box>

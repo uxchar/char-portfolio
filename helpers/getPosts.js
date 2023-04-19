@@ -17,6 +17,13 @@ const getPosts = () => {
     };
   });
 
+  // Sort posts by date
+  allPostsData.sort((a, b) => {
+    const dateA = new Date(a.data.date);
+    const dateB = new Date(b.data.date);
+    return dateB - dateA;
+  });
+
   return allPostsData;
 };
 
