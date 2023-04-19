@@ -106,3 +106,53 @@ const Post = ({ data, content }) => {
     </Container>
   );
 };
+
+export default Post;
+
+export const getStaticPaths = async () => {
+  const posts = await getPosts();
+  const paths = posts.map((post) => ({ params: { slug: post.slug } }));
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async ({ params }) => {
+  const post = await getPost(params.slug);
+  const mdxSource = await serialize(post.content, {
+    mdxOptions: {
+      rehypePlugins: [[imageSize, { dir: "public" }]],
+    },
+  });
+  return {
+    props: {
+      data: post.data,
+      content: mdxSource,
+    },
+  };
+};
+export const components = {
+  img: (props) => (
+    // height and width are part of the props, so they get automatically passed here with {...props}
+    <Zoom>
+      <Image {...props} loading="lazy" mb="40px" alt={props.alt || ""} />
+    </Zoom>
+  ),
+  h3: (props) => (
+    <chakra.h3 fontSize="5xl" mb="40px" mt="80px" fontWeight="700" {...props} />
+  ),
+  h4: (props) => (
+    <chakra.h4
+      fontSize="2xl"
+      mb="40px"
+      fontWeight="700"
+      fontStyle="italic"
+      {...props}
+      color={useColorModeValue("#5044fc", "#82fab2")}
+    />
+  ),
+  p: (props) => (
+    <chakra.p my="40px" fontFamily="Erode" fontSize="18px" {...props} />
+  ),
+};
