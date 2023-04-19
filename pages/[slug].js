@@ -149,7 +149,6 @@ export const components = {
       fontWeight="700"
       fontStyle="italic"
       {...props}
-      color={useColorModeValue("#5044fc", "#82fab2")}
     />
   ),
   p: (props) => (
