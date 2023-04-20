@@ -12,7 +12,7 @@ const Home = () => (
             size="3xl"
             variant="page-title "
           >
-            User Experience Design. Based in Louisville, KY.{" "}
+            User Experience Design Based in Louisville, KY.{" "}
           </Heading>
         </Section>
 
