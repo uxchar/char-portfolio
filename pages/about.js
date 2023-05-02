@@ -48,7 +48,8 @@ const About = () => (
           businesses.
           <br />
           <br />
-          As it turns out, my History degree has proven useful beyond just
+          Although I studied History, which is not a typical academic background
+          for a designer, my degree has proved to be useful in ways beyond just
           winning trivia nights. My fascination with the past has helped me
           develop a laser-sharp focus on detail in my designs, looking at and
           thinking critically about the design solutions I arrive at. When
