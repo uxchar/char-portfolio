@@ -14,7 +14,7 @@ const Works = ({ posts }) => (
       <Section>
         <Heading
           css={styles.heading}
-          color={useColorModeValue("#5044fc", "#82fab2")}
+          color={useColorModeValue("#5044fc", "#85fab2")}
         >
           Work
         </Heading>

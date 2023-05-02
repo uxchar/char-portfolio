@@ -22,7 +22,7 @@ const Footer = () => {
               aria-label="LinkedIn icon"
               borderRadius="30px"
               icon={<Icon.Linkedin size={25} />}
-              bg="#DBFFFC"
+              bg="#e7fef0"
               color="#100"
             />
           </Link>
@@ -31,7 +31,7 @@ const Footer = () => {
               aria-label="Email icon"
               borderRadius="30px"
               icon={<Icon.Mail size={25} />}
-              bg="#DBFFFC"
+              bg="#e7fef0"
               color="#100"
             />
           </Link>
@@ -51,7 +51,7 @@ const Footer = () => {
               aria-label="LinkedIn icon"
               borderRadius="30px"
               icon={<Icon.Linkedin size={25} />}
-              bg="#DBFFFC"
+              bg="#e7fef0"
               color="#100"
             />
           </Link>
@@ -60,7 +60,7 @@ const Footer = () => {
               aria-label="Email icon"
               borderRadius="30px"
               icon={<Icon.Mail size={25} />}
-              bg="#DBFFFC"
+              bg="#e7fef0"
               color="#100"
             />
           </Link>

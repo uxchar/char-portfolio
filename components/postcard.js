@@ -15,7 +15,14 @@ const PostCard = ({ title, date, description, image, slug, alt }) => {
   return (
     <Container textAlign="left" maxW="3xl" py={4} my={4} mb={5}>
       <Link legacyBehavior href="/[slug]" as={`/${slug}`} passHref>
-        <Image src={image} mb="25px" width="100%" cursor="pointer" alt={alt} />
+        <Image
+          src={image}
+          mb="25px"
+          width="100%"
+          cursor="pointer"
+          _hover={{ opacity: 0.7 }} // set opacity to 0.7 when hovering over the button
+          alt={alt}
+        />
       </Link>
       <Heading as="h2" size="md" fontWeight="extrabold" mb={4}>
         {title}
@@ -35,17 +42,16 @@ const PostCard = ({ title, date, description, image, slug, alt }) => {
       </Text>
       <Link legacyBehavior href="/[slug]" as={`/${slug}`} passHref>
         <Button
-          marginTop="30px"
-          padding="35px 40px"
+          marginTop="10px"
+          marginBottom="30px"
+          padding="30px 40px"
           borderRadius="8px"
           bg={useColorModeValue("#5044fc", "#82fab2")}
           color={useColorModeValue("#fff", "#221F1F")}
-          _hover="none"
+          _hover={{ opacity: 0.7 }} // set opacity to 0.7 when hovering over the button
           width={isMobile && "100%"} // set width to 100% on mobile screens
         >
-          <a mt={2} mb={1} fontSize="sm">
-            Read more
-          </a>
+          <a fontSize="sm">Read more</a>
         </Button>
       </Link>
     </Container>

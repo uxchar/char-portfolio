@@ -26,6 +26,11 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       bg={active ? "grassTeal" : undefined}
       color={active ? "#221F1F" : inactiveColor}
       target={target}
+      textDecoration="none"
+      _hover={{
+        textDecoration: "none",
+        color: useColorModeValue("#5044fc", "#82fab2"),
+      }}
       {...props}
     >
       {children}
@@ -95,7 +100,7 @@ const Navbar = (props) => {
             marginLeft="-10px"
             letterSpacing={"tighter"}
           >
-            <LinkItem href="/" path={path}>
+            <LinkItem href="/" path={path} textTransform="uppercase">
               Chauncey Harlan
             </LinkItem>
           </Heading>
@@ -143,8 +148,9 @@ const Navbar = (props) => {
             href="/works"
             path={path}
             onClick={handleToggle}
-            fontSize="32px"
+            fontSize="24px"
             fontWeight="bold"
+            textTransform="uppercase"
             color={useColorModeValue("#f0e7db", "#221F1F")}
           >
             Work
@@ -154,8 +160,9 @@ const Navbar = (props) => {
             href="/about"
             path={path}
             onClick={handleToggle}
-            fontSize="32px"
+            fontSize="24px"
             fontWeight="bold"
+            textTransform="uppercase"
             color={useColorModeValue("#f0e7db", "#221F1F")}
           >
             About

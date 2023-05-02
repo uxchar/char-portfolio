@@ -9,10 +9,12 @@ const Home = () => (
           <Heading
             margin="200px auto 20px -5px"
             as="h1"
-            size="3xl"
+            size="4xl"
             variant="page-title "
+            textTransform={"uppercase"}
+            lineHeight={"110%"}
           >
-            User Experience Design Based in Louisville, KY.{" "}
+            User Experience Design <br /> Based in Louisville KY.{" "}
           </Heading>
         </Section>
 

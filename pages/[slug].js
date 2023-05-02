@@ -143,13 +143,7 @@ export const components = {
     <chakra.h3 fontSize="5xl" mb="40px" mt="80px" fontWeight="700" {...props} />
   ),
   h4: (props) => (
-    <chakra.h4
-      fontSize="2xl"
-      mb="40px"
-      fontWeight="700"
-      fontStyle="italic"
-      {...props}
-    />
+    <chakra.h4 fontSize="22px" mb="40px" fontWeight="100" {...props} />
   ),
   p: (props) => (
     <chakra.p my="40px" fontFamily="Erode" fontSize="18px" {...props} />
