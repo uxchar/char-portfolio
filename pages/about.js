@@ -38,12 +38,12 @@ const About = () => (
       </Box>
       <Section>
         <Text fontFamily="Erode">
-          Have you ever opened an app or tried to use a new product, only to
-          feel immediately confused? It can be frustrating not knowing where to
-          click or what to do next. Unfortunately, badly designed products are
-          all too common. That&apos;s why I&apos;m a UX designer based in
-          Louisville, KY, and my mission is to alleviate this problem. By
-          experimenting with user data and visual design elements, I aim to
+          Opening an app or trying to use a new product, only to feel
+          immediately confused is not fun. It can be frustrating not knowing
+          where to click or what to do next. Unfortunately, badly designed
+          products are all too common. That&apos;s why I&apos;m a UX designer
+          based in Louisville, KY, and my mission is to alleviate this problem.
+          By experimenting with user data and visual design elements, I aim to
           create delightful experiences that lead to better outcomes for
           businesses.
           <br />
