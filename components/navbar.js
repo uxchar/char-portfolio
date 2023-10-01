@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router"; // Import the useRouter hook
 import NextLink from "next/link";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
 import {
   Container,
@@ -199,8 +199,6 @@ const Navbar = (props) => {
                 fontSize="sm"
                 textTransform="uppercase"
                 fontWeight={700}
-                fontSize="24px"
-                fontWeight="bold"
                 color="#221F1F"
                 onClick={handleToggle}
               >
