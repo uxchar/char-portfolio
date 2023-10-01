@@ -31,8 +31,11 @@
     "react-icons": "^4.8.0",
     "react-medium-image-zoom": "^5.1.3",
     "react-scroll": "^1.8.9",
+    "react-typewriter-effect": "^1.1.0",
+    "react-typist": "^2.0.5",
     "rehype-img-size": "^1.0.1",
-    "remark-mdx-images": "^2.0.0"
+    "remark-mdx-images": "^2.0.0",
+    "styled-components": "^6.0.8"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
