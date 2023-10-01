@@ -1,25 +1,21 @@
-import Head from "next/head";
 import PostCard from "../components/postcard";
 import getPosts from "../helpers/getPosts";
-import { Container, Heading, useColorModeValue } from "@chakra-ui/react";
+import { Container, Divider, Text, VStack } from "@chakra-ui/react"; // Use VStack to add spacing between cards
 import Section from "../components/section";
-import Layout from "../components/layouts/article";
 
 const Works = ({ posts }) => (
-  <Layout>
-    <Head>
-      <title>CH Portfolio - Work</title>
-    </Head>
-    <Container maxWidth="4xl" css={styles.container}>
-      <Section>
-        <Heading
-          css={styles.heading}
-          color={useColorModeValue("#5044fc", "#85fab2")}
-        >
-          Work
-        </Heading>
-      </Section>
+  <Container maxWidth="4xl" css={styles.container}>
+    <Section>
+      <Divider orientation="horizontal" mb="60px" />
 
+      <Text css={styles.heading} fontSize={40}>
+        Work
+      </Text>
+    </Section>
+
+    <VStack spacing={15} align="stretch">
+      {" "}
+      {/* Use VStack with spacing */}
       {posts.map((post) => (
         <Section delay={0.4} key={post.slug}>
           <PostCard
@@ -33,19 +29,19 @@ const Works = ({ posts }) => (
           />
         </Section>
       ))}
-    </Container>
-  </Layout>
+    </VStack>
+  </Container>
 );
 
 const styles = {
   container: {
-    marginTop: "4rem",
+    marginTop: "15rem",
   },
   heading: {
-    fontWeight: "700",
-    fontSize: "40px",
+    fontWeight: "600",
     marginTop: "2rem",
     marginBottom: "5rem",
+    textTransform: "uppercase",
   },
 };
 

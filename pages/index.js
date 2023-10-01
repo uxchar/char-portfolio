@@ -1,35 +1,85 @@
-import { Container, Heading, Box } from "@chakra-ui/react";
+import {
+  Container,
+  Heading,
+  Box,
+  Text,
+  Center,
+  Divider,
+} from "@chakra-ui/react";
 import Section from "../components/section";
+import Works from "./works";
+import getPosts from "../helpers/getPosts";
+import { Element } from "react-scroll";
+import Contact from "../components/contact";
 
-const Home = () => (
-  <Container maxW="4xl">
+const Home = ({ posts }) => (
+  <Container mt="50px" maxW="full" width="100%">
+    <Divider orientation="horizontal" mb="60px" />
+
     <Box display={{ md: "flex" }}>
       <Box flexGrow={1}>
-        <Section delay={0.2}>
-          <Heading
-            margin="200px auto 20px -5px"
-            as="h1"
-            size="4xl"
-            variant="page-title "
-            textTransform={"uppercase"}
-            lineHeight={"110%"}
-          >
-            User Experience Design <br /> Based in Louisville KY.{" "}
-          </Heading>
-        </Section>
-
-        <Section delay={0.3}>
-          <Heading
-            as="h2"
-            size={18}
-            fontWeight="light"
-            marginBottom={75}
-          ></Heading>
-        </Section>
+        <Element name="work">
+          <Center>
+            <Section delay={0.2}>
+              <Heading
+                margin="100px auto 20px -5px"
+                as="h1"
+                fontSize={{ base: "40px", md: "80px" }}
+                fontWeight="800"
+                variant="page-title"
+                textTransform="uppercase"
+                maxW="full"
+                width="100%"
+                whiteSpace="nowrap" // Prevent text wrapping
+              >
+                Chauncey Harlan
+              </Heading>
+              <Divider orientation="horizontal" mb="60px" />
+              <Text fontSize={16} textTransform="uppercase">
+                UX Designer & Digital Explorer
+              </Text>
+              <Text textTransform="uppercase" justify="flex-end">
+                Currently living and working in Louisville, KY <br /> United
+                States
+              </Text>
+            </Section>
+          </Center>
+        </Element>
+        <Element name="works">
+          <Section>
+            <Works posts={posts} />
+          </Section>
+        </Element>
+        <Element name="contact">
+          <Section>
+            <Contact />
+          </Section>
+        </Element>
       </Box>
     </Box>
   </Container>
 );
 
+// Rest of your code...
+
+export async function getStaticProps() {
+  try {
+    const posts = getPosts();
+
+    if (!Array.isArray(posts)) {
+      console.error("getPosts did not return an array:", posts);
+      return { props: { posts: [] } };
+    }
+
+    return {
+      props: {
+        posts,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+    return { props: { posts: [] } };
+  }
+}
+
 export default Home;
-export { getServerSideProps } from "../components/chakra";

@@ -1,35 +1,32 @@
 import { useState } from "react";
+import { useRouter } from "next/router"; // Import the useRouter hook
 import NextLink from "next/link";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+
 import {
   Container,
   Box,
   Link,
   Stack,
-  Heading,
   Flex,
-  useColorModeValue,
   Button,
   Text,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import ThemeToggleButton from "./theme-toggle-button";
 
-const LinkItem = ({ href, path, target, children, ...props }) => {
-  const active = path === href;
-  const inactiveColor = useColorModeValue("#221F1F", "#f0e7db");
+const LinkItem = ({ href, target, children, ...props }) => {
   return (
     <Link
       as={NextLink}
       href={href}
       scroll={false}
       p={2}
-      bg={active ? "grassTeal" : undefined}
-      color={active ? "#221F1F" : inactiveColor}
       target={target}
       textDecoration="none"
       _hover={{
         textDecoration: "none",
-        color: useColorModeValue("#5044fc", "#82fab2"),
+        color: "#82fab2", // Change color on hover
       }}
       {...props}
     >
@@ -56,7 +53,7 @@ const OverlayMenu = ({ isOpen, onClose, children }) => {
     <Box
       className={menuClass}
       style={menuStyles}
-      bg={useColorModeValue("#221F1F", "#f0e7db")}
+      bg="#f0e7db"
       maxW="4xl"
       mx="auto"
       h="100vh"
@@ -74,10 +71,8 @@ const OverlayMenu = ({ isOpen, onClose, children }) => {
         mr={2}
         onClick={onClose}
         variant="ghost"
-        color={useColorModeValue("#f0e7db", "#221F1F")}
-        _hover={{ bg: useColorModeValue("gray.100", "whiteAlpha.100") }}
       >
-        <CloseIcon boxSize={4} />
+        <CloseIcon boxSize={4} color="#221F1F" />
       </Button>
       {children}
     </Box>
@@ -87,23 +82,33 @@ const OverlayMenu = ({ isOpen, onClose, children }) => {
 const Navbar = (props) => {
   const { path } = props;
   const [show, setShow] = useState(false);
+  const router = useRouter(); // Get the router object
 
   const handleToggle = () => setShow(!show);
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
+  // Conditionally render the "Let's Chat" link only on the index page
+  const isIndexPage = router.pathname === "/";
 
   return (
     <Box position="relative" as="nav" w="100%" zIndex={2} {...props}>
       <Container display="flex" maxW="4xl">
         <Flex align="center" mr={10}>
-          <Heading
-            as="h1"
-            size="md"
-            marginLeft="-10px"
-            letterSpacing={"tighter"}
-          >
-            <LinkItem href="/" path={path} textTransform="uppercase">
-              Chauncey Harlan
-            </LinkItem>
-          </Heading>
+          {!isMobile && (
+            <>
+              <LinkItem href="/" path={path}>
+                <Text fontSize="sm" textTransform="uppercase" fontWeight={700}>
+                  Work
+                </Text>
+              </LinkItem>
+
+              <LinkItem href="/about" path={path}>
+                <Text fontSize="sm" textTransform="uppercase" fontWeight={700}>
+                  About
+                </Text>
+              </LinkItem>
+            </>
+          )}
         </Flex>
 
         <Box
@@ -112,18 +117,26 @@ const Navbar = (props) => {
           mt={{ base: 4, md: 0 }}
         >
           <Stack direction="row" spacing={4} justify="flex-end">
-            <LinkItem href="/works" path={path}>
-              <Text fontSize="sm" textTransform="uppercase" fontWeight={700}>
-                Work
-              </Text>
-            </LinkItem>
-
-            <LinkItem href="/about" path={path}>
-              <Text fontSize="sm" textTransform="uppercase" fontWeight={700}>
-                About
-              </Text>
-            </LinkItem>
-            <ThemeToggleButton />
+            {isIndexPage && ( // Render the "Let's Chat" link only on the index page
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={500}
+                offset={-50}
+                spy={true}
+                exact="true"
+                activeClass="active"
+                style={{ cursor: "pointer" }}
+                _hover={{
+                  textDecoration: "none",
+                  color: "#82fab2",
+                }}
+              >
+                <Text fontSize="sm" textTransform="uppercase" fontWeight={700}>
+                  Let&apos;s Chat
+                </Text>
+              </ScrollLink>
+            )}
           </Stack>
         </Box>
 
@@ -145,13 +158,13 @@ const Navbar = (props) => {
           justifyContent="center"
         >
           <LinkItem
-            href="/works"
+            href="/"
             path={path}
             onClick={handleToggle}
             fontSize="24px"
             fontWeight="bold"
             textTransform="uppercase"
-            color={useColorModeValue("#f0e7db", "#221F1F")}
+            color="#221F1F"
           >
             Work
           </LinkItem>
@@ -163,12 +176,38 @@ const Navbar = (props) => {
             fontSize="24px"
             fontWeight="bold"
             textTransform="uppercase"
-            color={useColorModeValue("#f0e7db", "#221F1F")}
+            color="#221F1F"
           >
             About
           </LinkItem>
-
-          <ThemeToggleButton />
+          {isIndexPage && ( // Render the "Let's Chat" link only on the index page
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-50}
+              spy={true}
+              exact="true"
+              activeClass="active"
+              style={{ cursor: "pointer" }}
+              _hover={{
+                textDecoration: "none",
+                color: "#82fab2",
+              }}
+            >
+              <Text
+                fontSize="sm"
+                textTransform="uppercase"
+                fontWeight={700}
+                fontSize="24px"
+                fontWeight="bold"
+                color="#221F1F"
+                onClick={handleToggle}
+              >
+                Let&apos;s Chat
+              </Text>
+            </ScrollLink>
+          )}
         </Stack>
       </OverlayMenu>
     </Box>
