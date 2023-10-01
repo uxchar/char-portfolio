@@ -3,15 +3,15 @@ import { Image } from "@chakra-ui/react";
 import Section from "../components/section";
 
 const About = () => (
-  <Container mt="50px" maxWidth="4xl">
+  <Container mt="500px" maxWidth="4xl">
     <Section>
       <Divider orientation="horizontal" mb="60px" />
 
-      <Heading css={styles.heading} fontSize={24}>
+      <Heading css={styles.heading} fontSize={30}>
         About Me
       </Heading>
     </Section>
-    <Heading fontSize={60} my={55} position="absolute" color="#82fab2">
+    <Heading fontSize={32} my={55} position="absolute" color="#82fab2">
       Hey I&rsquo;m <br /> Chauncey
     </Heading>
     <Box mx="auto" mb="30px">
