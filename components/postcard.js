@@ -18,9 +18,11 @@ const PostCard = ({ title, date, description, image, slug, alt }) => {
     <Flex direction="column" mb={4}>
       <Card
         overflow="hidden"
-        borderRadius="2xl"
-        borderColor={useColorModeValue("#221F1F", "#f0e7db")}
-        backgroundColor={useColorModeValue("#f0e7db", " #221F1F")}
+        borderRadius="xl"
+        borderColor="#f0e7dc"
+        borderWidth="3px"
+        borderStyle="solid"
+        backgroundColor=" #221F1F"
       >
         <Image objectFit="cover" maxW="100%" h="50%" src={image} alt={alt} />
 

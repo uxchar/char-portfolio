@@ -12,7 +12,7 @@ const About = () => (
       </Heading>
     </Section>
     <Heading fontSize={32} my={55} position="absolute" color="#82fab2">
-      Hey I&rsquo;m <br /> Chauncey
+      Hey I&rsquo;m <br /> Chauncey <br /> 👋🏾
     </Heading>
     <Box mx="auto" mb="30px">
       <Image
