@@ -14,10 +14,10 @@ import Contact from "../components/contact";
 
 const Home = ({ posts }) => (
   <Container mt="50px" maxW="full" width="100%">
-    <Divider orientation="horizontal" mb="60px" />
-
     <Box display={{ md: "flex" }}>
       <Box flexGrow={1}>
+        <Divider orientation="horizontal" mb="60px" />
+
         <Element name="work">
           <Center>
             <Section delay={0.2}>
@@ -34,7 +34,7 @@ const Home = ({ posts }) => (
               >
                 Chauncey Harlan
               </Heading>
-              <Divider orientation="horizontal" mb="60px" />
+              <Divider orientation="horizontal" mt="60px" mb="60px" />
               <Text fontSize={16} textTransform="uppercase">
                 UX Designer & Digital Explorer
               </Text>

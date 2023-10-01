@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import { useState } from "react";
 import { useRouter } from "next/router"; // Import the useRouter hook
 import NextLink from "next/link";
@@ -196,9 +197,9 @@ const Navbar = (props) => {
               }}
             >
               <Text
-                fontSize="sm"
                 textTransform="uppercase"
-                fontWeight={700}
+                fontSize="24px"
+                fontWeight="bold"
                 color="#221F1F"
                 onClick={handleToggle}
               >
