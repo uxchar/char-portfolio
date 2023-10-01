@@ -3,7 +3,7 @@ import { Image } from "@chakra-ui/react";
 import Section from "../components/section";
 
 const About = () => (
-  <Container mt="500px" maxWidth="4xl">
+  <Container maxWidth="4xl">
     <Section>
       <Divider orientation="horizontal" mb="60px" />
 
