@@ -128,7 +128,7 @@ const Navbar = () => {
                 }}
               >
                 <Text fontSize="sm" textTransform="uppercase" fontWeight={700}>
-                  Let's Chat
+                  Let&apos;s Chat
                 </Text>
               </ScrollLink>
             )}
