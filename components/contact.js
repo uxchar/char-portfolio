@@ -22,11 +22,11 @@ function Contact() {
             fontSize="50px"
             fontWeight="700"
             variant="page-title"
-            textTransform="uppercase"
+            textTransform="capitalize"
             marginTop="60"
             textAlign="center"
           >
-            Reach out and let&apos;s work together.
+            Reach out and let&apos;s work or chat about design together.
           </Heading>
         </Center>
         <Stack direction={{ base: "column", md: "row" }} spacing={4}>

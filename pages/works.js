@@ -1,7 +1,8 @@
 import PostCard from "../components/postcard";
 import getPosts from "../helpers/getPosts";
-import { Container, Divider, Text, VStack } from "@chakra-ui/react"; // Use VStack to add spacing between cards
+import { Container, Divider, Text, VStack } from "@chakra-ui/react";
 import Section from "../components/section";
+import { motion } from "framer-motion"; // Import motion
 
 const Works = ({ posts }) => (
   <Container maxWidth="4xl" css={styles.container}>
@@ -14,20 +15,25 @@ const Works = ({ posts }) => (
     </Section>
 
     <VStack spacing={15} align="stretch">
-      {" "}
-      {/* Use VStack with spacing */}
-      {posts.map((post) => (
-        <Section delay={0.4} key={post.slug}>
-          <PostCard
-            delay={0.3}
-            image={post.data.image}
-            title={post.data.title}
-            date={post.data.date}
-            description={post.data.description}
-            tags={post.data.tags}
-            slug={post.slug}
-          />
-        </Section>
+      {posts.map((post, index) => (
+        <motion.div
+          key={post.slug}
+          initial={index % 2 === 0 ? { x: -1000 } : { x: 1000 }} // Initial position based on index
+          animate={{ x: 0 }} // Animate to the center
+          transition={{ duration: 0.5, delay: 0.2 * index }} // Animation duration and delay
+        >
+          <Section delay={0.4} key={post.slug}>
+            <PostCard
+              delay={0.3}
+              image={post.data.image}
+              title={post.data.title}
+              date={post.data.date}
+              description={post.data.description}
+              tags={post.data.tags}
+              slug={post.slug}
+            />
+          </Section>
+        </motion.div>
       ))}
     </VStack>
   </Container>

@@ -5,7 +5,6 @@ import {
   Text,
   Image,
   Stack,
-  useColorModeValue,
   useBreakpointValue,
   Card,
   Flex,
@@ -31,7 +30,7 @@ const PostCard = ({ title, date, description, image, slug, alt }) => {
             as="h2"
             size="md"
             mt={2}
-            textColor={useColorModeValue("#221F1F", "#f0e7db")}
+            textColor="#f0e7db"
             fontWeight="extrabold"
             mb={2}
           >
@@ -44,7 +43,7 @@ const PostCard = ({ title, date, description, image, slug, alt }) => {
             fontSize="sm"
             whiteSpace="normal"
             wordWrap="break-word"
-            textColor={useColorModeValue("#221F1F", "#f0e7db")}
+            textColor="#f0e7db"
             mb={2}
           >
             {description}
@@ -52,14 +51,15 @@ const PostCard = ({ title, date, description, image, slug, alt }) => {
 
           <Link href={`/${slug}`} passHref>
             <Button
-              mt={2}
+              mt={4}
+              mb={4}
               borderRadius="lg"
-              bg={useColorModeValue("#5044fc", "#82fab2")}
-              color={useColorModeValue("#fff", "#221F1F")}
+              bg="#82fab2"
+              color="#221F1F"
               _hover={{ opacity: 0.7 }}
-              width={isMobile && "100%"}
-              fontSize="sm"
-              px={2}
+              width={isMobile ? "100%" : "auto"} // Adjust the width for mobile and desktop
+              fontSize={isMobile ? "sm" : "md"} // Adjust the font size for mobile and desktop
+              px={isMobile ? 2 : 4} // Adjust the padding for mobile and desktop
               py={1}
               textAlign="center"
               aria-label={`Read more about ${title}`} // Add an ARIA label for accessibility

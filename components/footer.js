@@ -28,23 +28,24 @@ const Footer = () => (
             as="a"
             href="https://www.linkedin.com/in/chauncey-harlan-ux/"
             aria-label="LinkedIn"
-            icon={<FaLinkedin />}
-            iconSize={{ base: "1.5rem", md: "2rem" }} // Set icon size here
+            icon={<FaLinkedin size="lg" />}
+            marginX="2" // Adjust the horizontal margin here
           />
+
           <IconButton
             as="a"
             href="https://github.com/uxchar"
             aria-label="GitHub"
-            icon={<FaGithub />}
-            iconSize={{ base: "1.5rem", md: "2rem" }} // Set icon size here
+            icon={<FaGithub size="lg" />}
+            marginX="2" // Adjust the horizontal margin here
           />
           <IconButton
             as="a"
             href="mailto:uxchar@outlook.com"
             isExternal
             aria-label="Email"
-            icon={<FaEnvelope />}
-            iconSize={{ base: "1.5rem", md: "2rem" }} // Set icon size here
+            icon={<FaEnvelope size="lg" />}
+            marginX="2" // Adjust the horizontal margin here
           />
         </ButtonGroup>
       </Stack>
