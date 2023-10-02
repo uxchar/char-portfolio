@@ -197,7 +197,7 @@ const Navbar = () => {
                   textTransform="uppercase"
                   color="#221F1F"
                 >
-                  Let's Chat
+                  Let&apos;s Chat
                 </Text>
               </ScrollLink>
             )}
