@@ -17,7 +17,7 @@ const About = () => (
     <Box mx="auto" mb="30px">
       <Image
         boxSize={300}
-        // borderRadius="full"
+        borderRadius="full"
         maxWidth="100%"
         objectFit="cover"
         mx="auto"
