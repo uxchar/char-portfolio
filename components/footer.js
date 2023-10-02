@@ -12,7 +12,7 @@ const Footer = () => (
 
     <Stack spacing={{ base: "4", md: "5" }}>
       <Stack
-        justify={{ base: "center", md: "space-between" }}
+        justify={{ base: "center" }}
         direction={{ base: "column", md: "row" }}
         alignItems="center"
       >
