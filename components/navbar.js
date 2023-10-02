@@ -37,7 +37,7 @@ const LinkItem = ({ href, target, children, ...props }) => {
 const OverlayMenu = ({ isOpen, onClose, children }) => {
   const menuStyles = {
     position: "fixed",
-    top: isOpen ? 0 : "-110%",
+    top: isOpen ? 0 : "100%",
     left: 0,
     bottom: 0,
     right: 0,

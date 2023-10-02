@@ -1,11 +1,4 @@
-import {
-  ButtonGroup,
-  Container,
-  IconButton,
-  Stack,
-  Text,
-  Divider,
-} from "@chakra-ui/react";
+import { Container, Stack, Text, Divider } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => (
@@ -23,40 +16,32 @@ const Footer = () => (
         direction={{ base: "column", md: "row" }}
         alignItems="center"
       >
-        <ButtonGroup variant="tertiary">
-          <IconButton
-            as="a"
-            href="https://www.linkedin.com/in/chauncey-harlan-ux/"
-            aria-label="LinkedIn"
-            icon={<FaLinkedin size="lg" />}
-            marginX="2" // Adjust the horizontal margin here
-            _hover={{
-              color: "#82fab2", // Change the color on hover
-            }}
-          />
+        <a
+          href="https://www.linkedin.com/in/chauncey-harlan-ux/"
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin size={35} />
+        </a>
 
-          <IconButton
-            as="a"
-            href="https://github.com/uxchar"
-            aria-label="GitHub"
-            icon={<FaGithub size="lg" />}
-            marginX="2" // Adjust the horizontal margin here
-            _hover={{
-              color: "#82fab2", // Change the color on hover
-            }}
-          />
-          <IconButton
-            as="a"
-            href="mailto:uxchar@outlook.com"
-            isExternal
-            aria-label="Email"
-            icon={<FaEnvelope size="lg" />}
-            marginX="2" // Adjust the horizontal margin here
-            _hover={{
-              color: "#82fab2", // Change the color on hover
-            }}
-          />
-        </ButtonGroup>
+        <a
+          href="https://github.com/uxchar"
+          aria-label="GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub size={35} />
+        </a>
+
+        <a
+          href="mailto:uxchar@outlook.com"
+          aria-label="Email"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaEnvelope size={35} />
+        </a>
       </Stack>
 
       <Text fontSize="sm" color="fg.subtle" textAlign="center">
