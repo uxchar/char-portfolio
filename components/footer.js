@@ -30,6 +30,9 @@ const Footer = () => (
             aria-label="LinkedIn"
             icon={<FaLinkedin size="lg" />}
             marginX="2" // Adjust the horizontal margin here
+            _hover={{
+              color: "#82fab2", // Change the color on hover
+            }}
           />
 
           <IconButton
@@ -38,6 +41,9 @@ const Footer = () => (
             aria-label="GitHub"
             icon={<FaGithub size="lg" />}
             marginX="2" // Adjust the horizontal margin here
+            _hover={{
+              color: "#82fab2", // Change the color on hover
+            }}
           />
           <IconButton
             as="a"
@@ -46,6 +52,9 @@ const Footer = () => (
             aria-label="Email"
             icon={<FaEnvelope size="lg" />}
             marginX="2" // Adjust the horizontal margin here
+            _hover={{
+              color: "#82fab2", // Change the color on hover
+            }}
           />
         </ButtonGroup>
       </Stack>
