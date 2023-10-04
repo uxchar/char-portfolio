@@ -1,4 +1,4 @@
-import { Button, useColorModeValue } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 
 const BackToTopButton = () => {
@@ -20,8 +20,6 @@ const BackToTopButton = () => {
     };
   }, []);
 
-  const elementColor = useColorModeValue("#5044fc", "#82fab2");
-  const buttonColorText = useColorModeValue("#fff", "#221F1F");
   return (
     <Button
       onClick={scrollToTop}
@@ -29,8 +27,8 @@ const BackToTopButton = () => {
       bottom="20px"
       right="20px"
       size="md"
-      bg={elementColor}
-      color={buttonColorText}
+      bg="#E50914"
+      color="#F5F5F1"
       display={showBackToTopButton ? "block" : "none"}
       _hover="none"
     >

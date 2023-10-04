@@ -22,6 +22,7 @@ const PostCard = ({ title, date, description, image, slug, alt }) => {
         borderWidth="3px"
         borderStyle="solid"
         backgroundColor=" #221F1F"
+        mb={10}
       >
         <Image objectFit="cover" maxW="100%" h="50%" src={image} alt={alt} />
 
@@ -54,8 +55,8 @@ const PostCard = ({ title, date, description, image, slug, alt }) => {
               mt={4}
               mb={4}
               borderRadius="lg"
-              bg="#82fab2"
-              color="#221F1F"
+              bg="#E50914"
+              color="#F5F5F1"
               _hover={{ opacity: 0.7 }}
               width={isMobile ? "100%" : "auto"} // Adjust the width for mobile and desktop
               fontSize={isMobile ? "sm" : "md"} // Adjust the font size for mobile and desktop

@@ -7,8 +7,6 @@ import { motion } from "framer-motion"; // Import motion
 const Works = ({ posts }) => (
   <Container maxWidth="4xl" css={styles.container}>
     <Section>
-      <Divider orientation="horizontal" mb="60px" />
-
       <Text css={styles.heading} fontSize={40}>
         Work
       </Text>
@@ -41,13 +39,16 @@ const Works = ({ posts }) => (
 
 const styles = {
   container: {
-    marginTop: "15rem",
+    marginTop: "25rem",
+    marginBottom: "15rem",
   },
   heading: {
+    display: "inline",
     fontWeight: "600",
     marginTop: "2rem",
     marginBottom: "5rem",
     textTransform: "uppercase",
+    backgroundColor: "#393533",
   },
 };
 

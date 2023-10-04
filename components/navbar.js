@@ -25,7 +25,7 @@ const LinkItem = ({ href, target, children, ...props }) => {
       textDecoration="none"
       _hover={{
         textDecoration: "none",
-        color: "#82fab2",
+        color: "#E50914",
       }}
       {...props}
     >
@@ -122,12 +122,16 @@ const Navbar = () => {
                 exact="true"
                 activeClass="active"
                 style={{ cursor: "pointer" }}
-                _hover={{
-                  textDecoration: "none",
-                  color: "#82fab2",
-                }}
+                onClick={handleToggle}
               >
-                <Text fontSize="sm" textTransform="uppercase" fontWeight={700}>
+                <Text
+                  fontSize="sm"
+                  fontWeight="bold"
+                  mt="10px"
+                  textTransform="uppercase"
+                  _hover={{ color: "#E50914" }}
+                  transition="color 0.3s ease-in-out"
+                >
                   Let&apos;s Chat
                 </Text>
               </ScrollLink>
@@ -187,7 +191,7 @@ const Navbar = () => {
                 style={{ cursor: "pointer" }}
                 _hover={{
                   textDecoration: "none",
-                  color: "#82fab2",
+                  color: "#E50914",
                 }}
                 onClick={handleToggle}
               >

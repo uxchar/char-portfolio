@@ -1,4 +1,4 @@
-import { Container, Stack, Text, Divider } from "@chakra-ui/react";
+import { Container, Stack, Text, Divider, Icon } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => (
@@ -22,7 +22,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin size={35} />
+          <Icon as={FaLinkedin} boxSize={8} _hover={{ color: "#E50914" }} />
         </a>
 
         <a
@@ -31,7 +31,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub size={35} />
+          <Icon as={FaGithub} boxSize={8} _hover={{ color: "#E50914" }} />
         </a>
 
         <a
@@ -40,7 +40,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaEnvelope size={35} />
+          <Icon as={FaEnvelope} boxSize={8} _hover={{ color: "#E50914" }} />
         </a>
       </Stack>
 

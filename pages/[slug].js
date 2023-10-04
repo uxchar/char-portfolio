@@ -19,9 +19,8 @@ import { motion } from "framer-motion";
 const Post = ({ data, content }) => {
   const [showBackToTopButton, setShowBackToTopButton] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const elementColor = useColorModeValue("#5044fc", "#82fab2");
-  const buttonColorText = useColorModeValue("#fff", "#221F1F");
-
+  const elementColor = "#E50914";
+  const buttonColorText = "#F5F5F1";
   const handleScroll = () => {
     const scrollTop = document.documentElement.scrollTop;
     const windowHeight =

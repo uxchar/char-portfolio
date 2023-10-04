@@ -5,13 +5,13 @@ import Section from "../components/section";
 const About = () => (
   <Container maxWidth="4xl">
     <Section>
-      <Divider orientation="horizontal" mb="60px" />
+      <Divider orientation="horizontal" mb="60px" width="100%" />
 
       <Heading css={styles.heading} fontSize={30}>
         About Me
       </Heading>
     </Section>
-    <Heading fontSize={32} my={55} position="absolute" color="#82fab2">
+    <Heading fontSize={32} my={55} position="absolute" color="#E50914">
       Hey I&rsquo;m <br /> Chauncey <br /> 👋🏾
     </Heading>
     <Box mx="auto" mb="30px">
@@ -56,11 +56,14 @@ const styles = {
     marginTop: "20rem",
   },
   heading: {
+    display: "inline",
     fontWeight: "600",
     marginTop: "2rem",
     marginBottom: "5rem",
     textTransform: "uppercase",
     margin: "0 auto",
+    backgroundColor: "#393533",
+    width: "auto",
   },
 };
 

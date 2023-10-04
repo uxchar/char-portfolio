@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Box,
   Button,
@@ -40,6 +38,7 @@ function Contact() {
             color="#f0e7db"
             fontSize="14px"
             fontWeight="500"
+            _hover={{ color: "#E50914" }}
           >
             Email
           </Button>
@@ -52,6 +51,7 @@ function Contact() {
             color="#f0e7db"
             fontSize="14px"
             fontWeight="500"
+            _hover={{ color: "#E50914" }}
           >
             Github
           </Button>
@@ -64,6 +64,7 @@ function Contact() {
             color="#f0e7db"
             fontSize="14px"
             fontWeight="500"
+            _hover={{ color: "#E50914" }}
           >
             Linkedin
           </Button>
