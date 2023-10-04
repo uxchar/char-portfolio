@@ -3,13 +3,15 @@ import getPosts from "../helpers/getPosts";
 import { Container, Text, VStack } from "@chakra-ui/react";
 import Section from "../components/section";
 import { motion } from "framer-motion"; // Import motion
+import { Divider } from "@chakra-ui/react";
 
 const Works = ({ posts }) => (
   <Container maxWidth="4xl" css={styles.container}>
     <Section>
-      <Text css={styles.heading} fontSize={40}>
+      <Text css={styles.heading} fontSize={32}>
         Work
       </Text>
+      <Divider orientation="horizontal" mt="5px" mb="60px" width="100%" />
     </Section>
 
     <VStack spacing={15} align="stretch">

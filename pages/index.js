@@ -19,7 +19,6 @@ import { useEffect, useState } from "react";
 import Typewriter from "../components/typewriter";
 
 const Home = ({ posts }) => {
-  const headingText = "Chauncey Harlan";
   const [bgColor, setBgColor] = useState("initialColor");
 
   useEffect(() => {
@@ -68,10 +67,19 @@ const Home = ({ posts }) => {
                   maxW="full"
                   width="100%"
                   whiteSpace="nowrap"
-                  bgColor="#393533"
                 >
-                  <Typewriter text={headingText} delay={150} />
+                  <Text as="span" delay={0.2}>
+                    Hey, I'm Chauncey
+                  </Text>
                 </Heading>
+
+                <Text>
+                  <Typewriter
+                    size="32px"
+                    text="Make yourself at home & explore my design process below 🙂"
+                    delay={50}
+                  />
+                </Text>
                 <Divider
                   orientation="horizontal"
                   mt="60px"
@@ -79,12 +87,18 @@ const Home = ({ posts }) => {
                   width="100%"
                 />
                 <Text fontSize={16} textTransform="uppercase">
-                  UX Designer, Curious Digital Explorer
+                  UX Designer
                 </Text>
                 <Text textTransform="uppercase" justify="flex-end">
                   Currently living and working in Louisville, KY <br /> United
                   States
                 </Text>
+                <Divider
+                  orientation="horizontal"
+                  mt="60px"
+                  mb="60px"
+                  width="100%"
+                />
                 <Center>
                   <Link to="works" smooth={true}>
                     <motion.div whileHover={{ y: 10 }} whileTap={{ y: 10 }}>
