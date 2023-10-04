@@ -60,13 +60,12 @@ const Home = ({ posts }) => {
                 <Heading
                   margin="100px auto 20px -5px"
                   as="h1"
-                  fontSize={{ base: "40px", md: "80px" }}
+                  fontSize={{ base: "50px", md: "80px" }}
                   fontWeight="800"
                   variant="page-title"
                   textTransform="uppercase"
                   maxW="full"
                   width="100%"
-                  whiteSpace="nowrap"
                 >
                   <Text as="span" delay={0.2}>
                     Hey, I&apos;m Chauncey
