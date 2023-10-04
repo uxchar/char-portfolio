@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 const Post = ({ data, content }) => {
   const [showBackToTopButton, setShowBackToTopButton] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const elementColor = "#E50914";
+  const elementColor = "#F8434C";
   const buttonColorText = "#F5F5F1";
   const handleScroll = () => {
     const scrollTop = document.documentElement.scrollTop;
@@ -41,7 +41,6 @@ const Post = ({ data, content }) => {
       <motion.div
         style={{
           height: "5px",
-          background: "gray",
           position: "fixed",
           top: 0,
           left: 0,
@@ -74,7 +73,7 @@ const Post = ({ data, content }) => {
                 fontWeight="700"
                 fontStyle="italic"
                 {...props}
-                color={elementColor}
+                color="#F8434C"
               />
             ),
           }}
@@ -133,10 +132,23 @@ export const components = {
     </Zoom>
   ),
   h3: (props) => (
-    <chakra.h3 fontSize="5xl" mb="40px" mt="80px" fontWeight="700" {...props} />
+    <chakra.h3
+      fontSize="5xl"
+      display="inline"
+      mb="60px"
+      mt="80px"
+      fontWeight="700"
+      {...props}
+    />
   ),
   h4: (props) => (
-    <chakra.h4 fontSize="22px" mb="40px" fontWeight="100" {...props} />
+    <chakra.h4
+      fontSize="22px"
+      mt="30px"
+      mb="40px"
+      fontWeight="100"
+      {...props}
+    />
   ),
   p: (props) => (
     <chakra.p my="40px" fontFamily="Erode" fontSize="18px" {...props} />

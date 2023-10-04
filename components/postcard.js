@@ -55,7 +55,7 @@ const PostCard = ({ title, date, description, image, slug, alt }) => {
               mt={4}
               mb={4}
               borderRadius="lg"
-              bg="#E50914"
+              bg="#F8434C"
               color="#F5F5F1"
               _hover={{ opacity: 0.7 }}
               width={isMobile ? "100%" : "auto"} // Adjust the width for mobile and desktop

@@ -11,7 +11,7 @@ const About = () => (
         About Me
       </Heading>
     </Section>
-    <Heading fontSize={32} my={55} position="absolute" color="#E50914">
+    <Heading fontSize={32} my={55} position="absolute" color="#F8434C">
       Hey I&rsquo;m <br /> Chauncey <br /> 👋🏾
     </Heading>
     <Box mx="auto" mb="30px">

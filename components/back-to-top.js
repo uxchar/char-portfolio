@@ -27,7 +27,7 @@ const BackToTopButton = () => {
       bottom="20px"
       right="20px"
       size="md"
-      bg="#E50914"
+      bg="#F8434C"
       color="#F5F5F1"
       display={showBackToTopButton ? "block" : "none"}
       _hover="none"

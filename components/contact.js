@@ -38,7 +38,7 @@ function Contact() {
             color="#f0e7db"
             fontSize="14px"
             fontWeight="500"
-            _hover={{ color: "#E50914" }}
+            _hover={{ color: "#F8434C" }}
           >
             Email
           </Button>
@@ -51,7 +51,7 @@ function Contact() {
             color="#f0e7db"
             fontSize="14px"
             fontWeight="500"
-            _hover={{ color: "#E50914" }}
+            _hover={{ color: "#F8434C" }}
           >
             Github
           </Button>
@@ -64,7 +64,7 @@ function Contact() {
             color="#f0e7db"
             fontSize="14px"
             fontWeight="500"
-            _hover={{ color: "#E50914" }}
+            _hover={{ color: "#F8434C" }}
           >
             Linkedin
           </Button>

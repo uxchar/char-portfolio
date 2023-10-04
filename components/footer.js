@@ -22,7 +22,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icon as={FaLinkedin} boxSize={8} _hover={{ color: "#E50914" }} />
+          <Icon as={FaLinkedin} boxSize={8} _hover={{ color: "#F8434C" }} />
         </a>
 
         <a
@@ -31,7 +31,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icon as={FaGithub} boxSize={8} _hover={{ color: "#E50914" }} />
+          <Icon as={FaGithub} boxSize={8} _hover={{ color: "#F8434C" }} />
         </a>
 
         <a
@@ -40,7 +40,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icon as={FaEnvelope} boxSize={8} _hover={{ color: "#E50914" }} />
+          <Icon as={FaEnvelope} boxSize={8} _hover={{ color: "#F8434C" }} />
         </a>
       </Stack>
 

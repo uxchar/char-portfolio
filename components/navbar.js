@@ -25,7 +25,7 @@ const LinkItem = ({ href, target, children, ...props }) => {
       textDecoration="none"
       _hover={{
         textDecoration: "none",
-        color: "#E50914",
+        color: "#F8434C",
       }}
       {...props}
     >
@@ -128,7 +128,7 @@ const Navbar = () => {
                   fontWeight="bold"
                   mt="10px"
                   textTransform="uppercase"
-                  _hover={{ color: "#E50914" }}
+                  _hover={{ color: "#F8434C" }}
                   transition="color 0.3s ease-in-out"
                 >
                   Let&apos;s Chat
@@ -190,7 +190,7 @@ const Navbar = () => {
                 style={{ cursor: "pointer" }}
                 _hover={{
                   textDecoration: "none",
-                  color: "#E50914",
+                  color: "#F8434C",
                 }}
                 onClick={handleToggle}
               >

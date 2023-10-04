@@ -100,7 +100,7 @@ const Home = ({ posts }) => {
                         mt="30px"
                         aria-label="Scroll down"
                         icon={<ChevronDownIcon w={10} h={10} />}
-                        _hover={{ color: "#E50914" }}
+                        _hover={{ color: "#F8434C" }}
                       />
                     </motion.div>
                   </Link>
