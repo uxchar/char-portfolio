@@ -1,12 +1,6 @@
 import { MDXRemote } from "next-mdx-remote";
 import { useState, useEffect } from "react";
-import {
-  Container,
-  Heading,
-  Button,
-  chakra,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Container, Heading, Button, chakra } from "@chakra-ui/react";
 import getPost from "../helpers/getPost";
 import getPosts from "../helpers/getPosts";
 import { serialize } from "next-mdx-remote/serialize";

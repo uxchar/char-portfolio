@@ -1,6 +1,6 @@
 import PostCard from "../components/postcard";
 import getPosts from "../helpers/getPosts";
-import { Container, Divider, Text, VStack } from "@chakra-ui/react";
+import { Container, Text, VStack } from "@chakra-ui/react";
 import Section from "../components/section";
 import { motion } from "framer-motion"; // Import motion
 
