@@ -57,7 +57,6 @@ const OverlayMenu = ({ isOpen, onClose, children }) => {
       h="100vh"
       overflowY="auto"
       boxShadow="xl"
-      p={6}
       onClick={(e) => e.stopPropagation()}
       position="relative"
     >

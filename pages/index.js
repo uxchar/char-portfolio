@@ -75,7 +75,7 @@ const Home = ({ posts }) => {
                 <Text>
                   <Typewriter
                     size="32px"
-                    text="Make yourself at home & explore my design process below 🙂"
+                    text="Explore my design process below 😄"
                     delay={50}
                   />
                 </Text>
@@ -92,17 +92,12 @@ const Home = ({ posts }) => {
                   Currently living and working in Louisville, KY <br /> United
                   States
                 </Text>
-                <Divider
-                  orientation="horizontal"
-                  mt="60px"
-                  mb="60px"
-                  width="100%"
-                />
+                <Divider orientation="horizontal" mt="60px" width="100%" />
                 <Center>
                   <Link to="works" smooth={true}>
                     <motion.div whileHover={{ y: 10 }} whileTap={{ y: 10 }}>
                       <IconButton
-                        mt="60px"
+                        mt="30px"
                         aria-label="Scroll down"
                         icon={<ChevronDownIcon w={10} h={10} />}
                         _hover={{ color: "#E50914" }}
