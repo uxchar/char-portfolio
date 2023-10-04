@@ -69,7 +69,7 @@ const Home = ({ posts }) => {
                   whiteSpace="nowrap"
                 >
                   <Text as="span" delay={0.2}>
-                    Hey, I'm Chauncey
+                    Hey, I&apos;m Chauncey
                   </Text>
                 </Heading>
 
