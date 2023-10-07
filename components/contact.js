@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Heading,
-  Stack,
-  Divider,
-  VStack,
-  Center,
-} from "@chakra-ui/react";
+import { Box, Heading, Divider, VStack, Center } from "@chakra-ui/react";
 
 function Contact() {
   return (
@@ -24,10 +16,10 @@ function Contact() {
             marginTop="60"
             textAlign="center"
           >
-            Reach out and let&apos;s work or chat about design together.
+            Let&apos;s connect. Hit one of the links below.
           </Heading>
         </Center>
-        <Stack direction={{ base: "column", md: "row" }} spacing={4}>
+        {/* <Stack direction={{ base: "column", md: "row" }} spacing={4}>
           <Button
             as="a"
             href="mailto:uxchar@outlook.com"
@@ -68,7 +60,7 @@ function Contact() {
           >
             Linkedin
           </Button>
-        </Stack>
+        </Stack> */}
       </VStack>
     </Box>
   );

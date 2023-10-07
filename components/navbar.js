@@ -112,7 +112,7 @@ const Navbar = () => {
   return (
     <Box position="relative" as="nav" w="100%" zIndex={2}>
       <Container display="flex" maxW="4xl">
-        <Flex align="center" mr={10}>
+        <Flex align="center" mr={10} mb={5}>
           {!isMobile && (
             <>
               <LinkItem href="/" path="/">
@@ -165,7 +165,12 @@ const Navbar = () => {
 
         <Box flex={1} align="right">
           <Box mr={2} display={{ base: "inline-block", md: "none" }}>
-            <Button onClick={handleToggle} variant="ghost">
+            <Button
+              onClick={handleToggle}
+              variant="ghost"
+              color="#e6dbcc"
+              mb="10px"
+            >
               {show ? <CloseIcon boxSize={8} /> : <HamburgerIcon boxSize={8} />}
             </Button>
           </Box>
