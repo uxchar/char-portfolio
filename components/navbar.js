@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import NextLink from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import {
   Container,
@@ -18,30 +17,35 @@ import { scroller } from "react-scroll";
 const LinkItem = ({ href, target, children, ...props }) => {
   const router = useRouter();
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    // If on the home page and the href is also "/", scroll rather than navigate.
     if (router.pathname === "/" && href === "/") {
+      e.preventDefault();
       scroller.scrollTo("works", {
         duration: 800,
         delay: 0,
         smooth: "easeInOutQuart",
       });
     } else if (href === "/") {
-      router.push("/?scrollTo=works");
+      // For other pages navigating to "/", navigate and then scroll.
+      e.preventDefault();
+      router.push("/").then(() =>
+        scroller.scrollTo("works", {
+          duration: 800,
+          delay: 0,
+          smooth: "easeInOutQuart",
+        })
+      );
     }
   };
 
   return (
     <Link
-      as={NextLink}
-      href={href === "/" ? "#" : href} // Prevents navigating to the same route
-      scroll={false}
+      href={href}
       p={2}
       target={target}
       textDecoration="none"
-      _hover={{
-        textDecoration: "none",
-        color: "#F8434C",
-      }}
+      _hover={{ textDecoration: "none", color: "#F8434C" }}
       onClick={handleClick}
       {...props}
     >
@@ -49,6 +53,7 @@ const LinkItem = ({ href, target, children, ...props }) => {
     </Link>
   );
 };
+
 const OverlayMenu = ({ isOpen, onClose, children }) => {
   const menuStyles = {
     position: "fixed",
