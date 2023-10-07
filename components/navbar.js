@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+import NextLink from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import {
   Container,
@@ -14,46 +15,50 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { scroller } from "react-scroll";
 
-const LinkItem = ({ href, target, children, ...props }) => {
+const LinkItem = ({ href, target, children, onClick, ...props }) => {
+  // Added onClick parameter above to make sure it's available in the scope
+
   const router = useRouter();
 
-  const handleClick = (e) => {
-    // If on the home page and the href is also "/", scroll rather than navigate.
+  const handleClick = () => {
     if (router.pathname === "/" && href === "/") {
-      e.preventDefault();
       scroller.scrollTo("works", {
         duration: 800,
         delay: 0,
         smooth: "easeInOutQuart",
       });
     } else if (href === "/") {
-      // For other pages navigating to "/", navigate and then scroll.
-      e.preventDefault();
-      router.push("/").then(() =>
-        scroller.scrollTo("works", {
-          duration: 800,
-          delay: 0,
-          smooth: "easeInOutQuart",
-        })
-      );
+      router.push("/?scrollTo=works");
+    }
+  };
+
+  const handleLinkClick = (e) => {
+    handleClick();
+    // Added guard clause to check onClick type before invoking it
+    if (typeof onClick === "function") {
+      onClick(e);
     }
   };
 
   return (
     <Link
-      href={href}
+      as={NextLink}
+      href={href === "/" ? "#" : href} // Prevents navigating to the same route
+      scroll={false}
       p={2}
       target={target}
       textDecoration="none"
-      _hover={{ textDecoration: "none", color: "#F8434C" }}
-      onClick={handleClick}
+      _hover={{
+        textDecoration: "none",
+        color: "#F8434C",
+      }}
+      onClick={handleLinkClick}
       {...props}
     >
       {children}
     </Link>
   );
 };
-
 const OverlayMenu = ({ isOpen, onClose, children }) => {
   const menuStyles = {
     position: "fixed",
