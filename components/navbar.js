@@ -13,12 +13,27 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { scroller } from "react-scroll";
 
 const LinkItem = ({ href, target, children, ...props }) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (router.pathname === "/" && href === "/") {
+      scroller.scrollTo("works", {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+    } else if (href === "/") {
+      router.push("/?scrollTo=works");
+    }
+  };
+
   return (
     <Link
       as={NextLink}
-      href={href}
+      href={href === "/" ? "#" : href} // Prevents navigating to the same route
       scroll={false}
       p={2}
       target={target}
@@ -27,13 +42,13 @@ const LinkItem = ({ href, target, children, ...props }) => {
         textDecoration: "none",
         color: "#F8434C",
       }}
+      onClick={handleClick}
       {...props}
     >
       {children}
     </Link>
   );
 };
-
 const OverlayMenu = ({ isOpen, onClose, children }) => {
   const menuStyles = {
     position: "fixed",

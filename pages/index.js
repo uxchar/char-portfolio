@@ -15,39 +15,28 @@ import { Element } from "react-scroll";
 import Contact from "../components/contact";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import Typewriter from "../components/typewriter";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import { scroller } from "react-scroll";
 
 const Home = ({ posts }) => {
-  const [bgColor, setBgColor] = useState("initialColor");
+  const router = useRouter();
 
   useEffect(() => {
-    const handleScroll = () => {
-      const workSection = document.querySelector('[name="works"]').offsetTop;
-      const workSectionHeight =
-        document.querySelector('[name="works"]').offsetHeight;
-
-      if (
-        window.scrollY >= workSection &&
-        window.scrollY <= workSection + workSectionHeight
-      ) {
-        setBgColor("#initialColor");
-      } else {
-        setBgColor("initialColor");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    if (router.query.scrollTo === "works") {
+      scroller.scrollTo("works", {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+    }
+  }, [router.query.scrollTo]);
 
   return (
     <Container
       mt="50px"
       maxW="full"
       width="100%"
-      bg={bgColor}
       transition="background 0.3s ease-in-out"
     >
       <Box display={{ md: "flex" }}>
@@ -68,31 +57,10 @@ const Home = ({ posts }) => {
                   width="100%"
                 >
                   <Text as="span" delay={0.2}>
-                    Hey, I&apos;m Chauncey
+                    Hey, I&apos;m Chauncey. I am a UX/UI Designer currently
+                    living and working in Louisville, KY.
                   </Text>
                 </Heading>
-
-                <Text>
-                  <Typewriter
-                    size="32px"
-                    text="Explore my design process below 😄"
-                    delay={50}
-                  />
-                </Text>
-                <Divider
-                  orientation="horizontal"
-                  mt="60px"
-                  mb="60px"
-                  width="100%"
-                />
-                <Text fontSize={16} textTransform="uppercase">
-                  UX Designer
-                </Text>
-                <Text textTransform="uppercase" justify="flex-end">
-                  Currently living and working in Louisville, KY <br /> United
-                  States
-                </Text>
-                <Divider orientation="horizontal" mt="60px" width="100%" />
                 <Center>
                   <Link to="works" smooth={true}>
                     <motion.div whileHover={{ y: 10 }} whileTap={{ y: 10 }}>
@@ -105,6 +73,12 @@ const Home = ({ posts }) => {
                     </motion.div>
                   </Link>
                 </Center>
+                <Divider
+                  orientation="horizontal"
+                  mt="60px"
+                  mb="60px"
+                  width="100%"
+                />
               </Section>
             </Center>
           </Element>
