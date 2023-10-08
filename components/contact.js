@@ -16,7 +16,8 @@ function Contact() {
             marginTop="60"
             textAlign="center"
           >
-            Let&apos;s connect. Hit one of the links below.
+            Let&apos;s connect. You can reach me by hitting one of the links
+            below!
           </Heading>
         </Center>
         {/* <Stack direction={{ base: "column", md: "row" }} spacing={4}>
