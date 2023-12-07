@@ -10,7 +10,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
-const PostCard = ({ title, date, description, image, slug, alt }) => {
+const PostCard = ({ title, description, image, slug, alt }) => {
   const isMobile = useBreakpointValue({ base: true, sm: true, md: false });
 
   return (
@@ -37,9 +37,9 @@ const PostCard = ({ title, date, description, image, slug, alt }) => {
           >
             {title}
           </Heading>
-          <Text opacity=".4" fontSize="sm" mb={1}>
+          {/* <Text opacity=".4" fontSize="sm" mb={1}>
             {date}
-          </Text>
+          </Text> */}
           <Text
             fontSize="sm"
             whiteSpace="normal"
