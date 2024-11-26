@@ -116,13 +116,13 @@ const Navbar = () => {
           {!isMobile && (
             <>
               <LinkItem href="/" path="/">
-                <Text fontSize="sm" textTransform="uppercase" fontWeight={700}>
+                <Text fontSize="md" textTransform="uppercase" fontWeight={700}>
                   Work
                 </Text>
               </LinkItem>
 
               <LinkItem href="/about" path="/about">
-                <Text fontSize="sm" textTransform="uppercase" fontWeight={700}>
+                <Text fontSize="md" textTransform="uppercase" fontWeight={700}>
                   About
                 </Text>
               </LinkItem>
@@ -149,7 +149,7 @@ const Navbar = () => {
                 onClick={handleToggle}
               >
                 <Text
-                  fontSize="sm"
+                  fontSize="md"
                   fontWeight="bold"
                   mt="10px"
                   textTransform="uppercase"
@@ -188,7 +188,7 @@ const Navbar = () => {
           >
             <LinkItem href="/" path="/" onClick={handleToggle}>
               <Text
-                fontSize="24px"
+                fontSize="md"
                 fontWeight="bold"
                 textTransform="uppercase"
                 color="#221F1F"
@@ -199,7 +199,7 @@ const Navbar = () => {
 
             <LinkItem href="/about" path="/about" onClick={handleToggle}>
               <Text
-                fontSize="24px"
+                fontSize="md"
                 fontWeight="bold"
                 textTransform="uppercase"
                 color="#221F1F"
@@ -225,7 +225,7 @@ const Navbar = () => {
                 onClick={handleToggle}
               >
                 <Text
-                  fontSize="24px"
+                  fontSize="md"
                   fontWeight="bold"
                   textTransform="uppercase"
                   color="#221F1F"
