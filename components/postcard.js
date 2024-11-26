@@ -49,15 +49,14 @@ const PostCard = ({ title, description, image, slug, alt }) => {
 
           <Link href={`/${slug}`} passHref>
             <Button
-              mt={6}
-              mb={6}
+              my={6}
               borderRadius="lg"
               bg="#F8434C"
               color="#221f1f"
               _hover={{ opacity: 0.7 }}
               width={isMobile ? "100%" : "auto"} // Adjust the width for mobile and desktop
               fontSize={isMobile ? "sm" : "md"} // Adjust the font size for mobile and desktop
-              px={isMobile ? 2 : 4} // Adjust the padding for mobile and desktop
+              px={isMobile ? 2 : 8} // Adjust the padding for mobile and desktop
               py={8}
               textAlign="center"
               aria-label={`Read more about ${title}`} // Add an ARIA label for accessibility

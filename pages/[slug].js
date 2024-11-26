@@ -87,7 +87,6 @@ const Post = ({ data, content }) => {
             right="20px"
             size="md"
             bg={elementColor}
-            x
             color={buttonColorText}
             _hover="none"
           >

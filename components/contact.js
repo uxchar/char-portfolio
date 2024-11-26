@@ -20,48 +20,6 @@ function Contact() {
             below!
           </Heading>
         </Center>
-        {/* <Stack direction={{ base: "column", md: "row" }} spacing={4}>
-          <Button
-            as="a"
-            href="mailto:uxchar@outlook.com"
-            isExternal
-            variant="outline"
-            textTransform="uppercase"
-            border="none"
-            color="#f0e7db"
-            fontSize="14px"
-            fontWeight="500"
-            _hover={{ color: "#F8434C" }}
-          >
-            Email
-          </Button>
-          <Button
-            as="a"
-            href="https://github.com/uxchar"
-            variant="outline"
-            textTransform="uppercase"
-            border="none"
-            color="#f0e7db"
-            fontSize="14px"
-            fontWeight="500"
-            _hover={{ color: "#F8434C" }}
-          >
-            Github
-          </Button>
-          <Button
-            as="a"
-            href="https://www.linkedin.com/in/chauncey-harlan-ux/"
-            variant="outline"
-            textTransform="uppercase"
-            border="none"
-            color="#f0e7db"
-            fontSize="14px"
-            fontWeight="500"
-            _hover={{ color: "#F8434C" }}
-          >
-            Linkedin
-          </Button>
-        </Stack> */}
       </VStack>
     </Box>
   );
