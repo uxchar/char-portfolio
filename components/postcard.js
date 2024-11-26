@@ -10,7 +10,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
-const PostCard = ({ title, description, image, slug, alt, tags }) => {
+const PostCard = ({ title, description, image, slug, alt }) => {
   const isMobile = useBreakpointValue({ base: true, sm: true, md: false });
 
   return (
