@@ -14,7 +14,7 @@ const Post = ({ data, content }) => {
   const [showBackToTopButton, setShowBackToTopButton] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const elementColor = "#F8434C";
-  const buttonColorText = "#F5F5F1";
+  const buttonColorText = "#221f1f";
   const handleScroll = () => {
     const scrollTop = document.documentElement.scrollTop;
     const windowHeight =

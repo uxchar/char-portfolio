@@ -28,24 +28,35 @@ const About = () => (
     </Box>
     <Section>
       <Text fontFamily="Erode">
-        Opening an app or trying to use a new product, only to feel immediately
-        confused is not fun. It can be frustrating not knowing where to click or
-        what to do next. Unfortunately, badly designed products are all too
-        common. That&apos;s why I&apos;m a UX designer based in Louisville, KY,
-        and my mission is to alleviate this problem. By experimenting with user
-        data and visual design elements, I aim to create delightful experiences
-        that lead to better outcomes for users.
+        I wasn&apos;t always an engineer and designer in the traditional sense.
+        In fact, my journey here started in the last place you&apos;d expect, a
+        history classroom. Back then, I spent hours poring over books and
+        piecing together the stories of the past, developing a deep love for
+        patterns, problem-solving, and asking why. I never thought those skills
+        would one day help me design apps and write code, but here I am.
         <br />
         <br />
-        Although I studied History, which is not a typical academic background
-        for a designer, my degree has proved to be useful in ways beyond just
-        winning trivia nights. My fascination with the past has helped me
-        develop a laser-sharp focus on detail in my designs, looking at and
-        thinking critically about the design solutions I arrive at. When
-        I&apos;m not designing, you can find me exploring sound design, working
-        out at the gym, or practicing my 3D modeling skills (interested in
-        VR/AR!). If you&apos;re interested in collaborating or chatting about
-        design, please feel free to reach out to me.
+        I still think a lot about people&apos;s stories, but now I approach them
+        through the lens of technology. Whether it&apos;s an app, a website, or
+        a product, I think about the journey people take from the moment they
+        open it to the instant they achieve what they came to do. My job is to
+        make that journey smooth, intuitive, and maybe even delightful.
+        <br />
+        <br />
+        Over the years, I&apos;ve had the privilege of working on some exciting
+        projects: building a fitness app that helps people track their workouts,
+        designing a Reddit-inspired post feed, and contributing to a Humana app
+        aimed at tackling health inequality. These experiences taught me how
+        powerful good design and thoughtful development can be when they come
+        together.
+        <br />
+        <br />
+        When I&apos;m not working, you might find me experimenting with sound
+        design, practicing 3D modeling (hello, VR/AR!), or recharging at the
+        gym. I&apos;m endlessly curious and love tackling new challenges,
+        whether that&apos;s exploring a new framework or brainstorming grand
+        ideas. If you&apos;re interested in working together or just want to
+        talk design, dev, or anything creative, feel free to reach out!
       </Text>
     </Section>
   </Container>

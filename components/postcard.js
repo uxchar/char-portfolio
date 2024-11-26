@@ -10,7 +10,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
-const PostCard = ({ title, description, image, slug, alt }) => {
+const PostCard = ({ title, description, image, slug, alt, tags }) => {
   const isMobile = useBreakpointValue({ base: true, sm: true, md: false });
 
   return (
@@ -29,7 +29,7 @@ const PostCard = ({ title, description, image, slug, alt }) => {
         <Stack p={4}>
           <Heading
             as="h2"
-            size="md"
+            size="lg"
             mt={2}
             textColor="#f0e7db"
             fontWeight="extrabold"
@@ -37,9 +37,6 @@ const PostCard = ({ title, description, image, slug, alt }) => {
           >
             {title}
           </Heading>
-          {/* <Text opacity=".4" fontSize="sm" mb={1}>
-            {date}
-          </Text> */}
           <Text
             fontSize="sm"
             whiteSpace="normal"
@@ -52,16 +49,16 @@ const PostCard = ({ title, description, image, slug, alt }) => {
 
           <Link href={`/${slug}`} passHref>
             <Button
-              mt={4}
-              mb={4}
+              mt={6}
+              mb={6}
               borderRadius="lg"
               bg="#F8434C"
-              color="#F5F5F1"
+              color="#221f1f"
               _hover={{ opacity: 0.7 }}
               width={isMobile ? "100%" : "auto"} // Adjust the width for mobile and desktop
               fontSize={isMobile ? "sm" : "md"} // Adjust the font size for mobile and desktop
               px={isMobile ? 2 : 4} // Adjust the padding for mobile and desktop
-              py={1}
+              py={8}
               textAlign="center"
               aria-label={`Read more about ${title}`} // Add an ARIA label for accessibility
               role="link" // Indicate that this is a link

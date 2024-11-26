@@ -57,8 +57,8 @@ const Home = ({ posts }) => {
                   width="100%"
                 >
                   <Text as="span" delay={0.2}>
-                    Hey, I&apos;m Chauncey. I am a UX/UI Designer currently
-                    living and working in Louisville, KY.
+                    Hey, I&apos;m Chauncey, A Developer that dabbles in UX/UI
+                    Design Sometimes. Living & working in Louisville, KY.
                   </Text>
                 </Heading>
                 <Center>
