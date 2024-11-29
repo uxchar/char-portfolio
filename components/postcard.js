@@ -8,9 +8,10 @@ import {
   useBreakpointValue,
   Card,
   Flex,
+  Tag,
 } from "@chakra-ui/react";
 
-const PostCard = ({ title, description, image, slug, alt }) => {
+const PostCard = ({ title, description, image, slug, alt, tags }) => {
   const isMobile = useBreakpointValue({ base: true, sm: true, md: false });
 
   return (
@@ -26,6 +27,13 @@ const PostCard = ({ title, description, image, slug, alt }) => {
       >
         <Image objectFit="cover" maxW="100%" h="50%" src={image} alt={alt} />
 
+        <Flex wrap="wrap" p={4} gap={2}>
+          {tags.map((tag, index) => (
+            <Tag key={index} size="md" textColor="#f0e7dc" borderRadius="full">
+              {tag}
+            </Tag>
+          ))}
+        </Flex>
         <Stack p={4}>
           <Heading
             as="h2"

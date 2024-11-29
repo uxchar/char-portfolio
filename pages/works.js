@@ -1,6 +1,6 @@
 import PostCard from "../components/postcard";
 import getPosts from "../helpers/getPosts";
-import { Container, Text, VStack } from "@chakra-ui/react";
+import { Container, SimpleGrid, Text } from "@chakra-ui/react";
 import Section from "../components/section";
 import { motion } from "framer-motion"; // Import motion
 import { Divider } from "@chakra-ui/react";
@@ -14,7 +14,7 @@ const Works = ({ posts }) => (
       <Divider orientation="horizontal" mt="5px" mb="60px" width="100%" />
     </Section>
 
-    <VStack spacing={15} align="stretch">
+    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
       {posts.map((post, index) => (
         <motion.div
           key={post.slug}
@@ -35,7 +35,7 @@ const Works = ({ posts }) => (
           </Section>
         </motion.div>
       ))}
-    </VStack>
+    </SimpleGrid>
   </Container>
 );
 
