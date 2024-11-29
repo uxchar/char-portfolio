@@ -43,12 +43,12 @@ const About = () => (
         make that journey smooth, intuitive, and maybe even delightful.
         <br />
         <br />
-        Over the years, I&apos;ve had the privilege of working on some exciting
-        projects: building a fitness app that helps people track their workouts,
-        designing a Reddit-inspired post feed, and contributing to a Humana app
-        aimed at tackling health inequality. These experiences taught me how
-        powerful good design and thoughtful development can be when they come
-        together.
+        Over just the past few months, I&apos;ve had the privilege of working on
+        some exciting projects: building a fitness app that helps people track
+        their workouts, designing a Reddit-inspired post feed, and contributing
+        to a Humana app aimed at tackling health inequality. These experiences
+        taught me how powerful good design and thoughtful development can be
+        when they come together.
         <br />
         <br />
         When I&apos;m not working, you might find me experimenting with sound
