@@ -11,11 +11,12 @@ const Footer = () => (
   >
     <Divider orientation="horizontal" mb="30px" />
 
-    <Stack spacing={{ base: "4", md: "5" }}>
+    <Stack spacing={{ base: "6", md: "10" }}>
       <Stack
         justify={{ base: "center" }}
         direction={{ base: "column", md: "row" }}
         alignItems="center"
+        gap={5}
       >
         <a
           href="https://www.linkedin.com/in/chauncey-harlan-ux/"
