@@ -1,5 +1,6 @@
 import { Container, Stack, Text, Divider, Icon } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { SiFrontendmentor } from "react-icons/si";
 
 const Footer = () => (
   <Container
@@ -32,6 +33,19 @@ const Footer = () => (
           rel="noopener noreferrer"
         >
           <Icon as={FaGithub} boxSize={8} _hover={{ color: "#F8434C" }} />
+        </a>
+
+        <a
+          href="https://www.frontendmentor.io/profile/uxchar"
+          aria-label="Frontend Mentor"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon
+            as={SiFrontendmentor}
+            boxSize={8}
+            _hover={{ color: "#F8434C" }}
+          />
         </a>
 
         <a
